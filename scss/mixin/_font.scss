@@ -1,0 +1,27 @@
+ @mixin fz-paragraph($weight) {
+  font-size: 14px;
+  letter-spacing: .12rem;
+  font-weight: $weight;
+  line-height: 1.6rem;
+ }
+
+ @mixin fz-subtitle($weight) {
+  font-size: 1.2rem;
+  letter-spacing: .12rem;
+  font-weight: $weight;
+
+ }
+
+ @mixin fz-sectionTitle($weight) {
+  font-size: 1.5rem;
+  letter-spacing: .12rem;
+  font-weight: $weight;
+ }
+
+ @mixin fm-en {
+  font-family: sans-serif;
+ }
+
+ @mixin fm-jp {
+  font-family: sans-serif;
+ }

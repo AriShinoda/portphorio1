@@ -1,0 +1,31 @@
+
+@mixin white-bg {
+ background-color: #f9f9f9;
+}
+
+@mixin black-bg {
+ background-color: #494949;
+}
+
+@mixin black-bg_trans {
+ background-color: rgb(73, 73, 73);
+ opacity: .4;
+}
+
+@mixin obj-blue {
+ background-color: #00D5E5;
+}
+
+@mixin font-black {
+ color: #494949;
+}
+
+@mixin font-white {
+ color: #f9f9f9;
+}
+
+@mixin font-blue {
+ color: #00D5E5;
+}
+
+
