@@ -1,0 +1,14 @@
+@mixin rowFlex {
+ display: flex;
+ flex-direction: row;
+}
+
+@mixin columnFlex {
+ display: flex;
+ flex-direction: column;
+}
+
+@mixin  outer-width {
+ max-width: 92%;
+ margin: 0 auto;
+}

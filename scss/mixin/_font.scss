@@ -12,16 +12,16 @@
 
  }
 
- @mixin fz-sectionTitle($weight) {
+ @mixin fz-sectiontitle($weight) {
   font-size: 1.5rem;
   letter-spacing: .12rem;
   font-weight: $weight;
  }
 
  @mixin fm-en {
-  font-family: sans-serif;
+  font-family: 'Quicksand' ,sans-serif;
  }
 
  @mixin fm-jp {
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP',sans-serif;
  }

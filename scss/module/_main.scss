@@ -1,0 +1,54 @@
+main {
+ margin: 0 auto;
+ max-width: 100%;
+}
+
+.catchcopy-box {
+ @include columnFlex;
+ justify-content: center;
+ text-align: center;
+ margin: 0 auto;
+ padding: 0;
+ width: 70%;
+
+ &_enword {
+  @include fz-sectiontitle(700);
+ }
+
+ &_sentence {
+  width: 100%;
+ }
+}
+
+.linkicon-box {
+ @include rowFlex;
+ justify-content: center;
+ margin: 0 auto;
+ width: 50%;
+
+ &_item {
+  margin: 0 1rem;
+ }
+}
+
+.sectiontitle {
+ width: 50%;
+ margin: 0 auto;
+ text-align: center;
+ padding: 0 0 3rem 0;
+
+ &-jp {
+  @include fz-paragraph(700);
+ }
+}
+
+.section-wrapper {
+ max-width: 100%;
+ margin: 0 auto;
+}
+
+.service-grid {
+ @include outer-width;
+ 
+
+}
