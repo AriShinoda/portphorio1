@@ -50,5 +50,7 @@ main {
 .service-grid {
  @include outer-width;
  
-
+ &_item {
+  
+ }
 }
