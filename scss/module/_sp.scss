@@ -1,0 +1,153 @@
+// formobilecss
+
+.spnav {
+ display: none;
+}
+//menu
+@include tab {
+ .pcnav-bar {
+  display: none;
+ }
+ .spnav {
+  display:inline;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+
+  &-linebox {
+   position: fixed;
+   right: 0;
+   top:0;
+   width: 50px;
+   height: 35px;
+   margin: .8rem;
+    
+   &_item {
+    position: absolute;
+    width: 100%;
+    height: 19%;
+    border-radius: 2rem;
+    right: 0;
+    @include black-bg;
+   }
+   &_item:nth-last-of-type(1) {
+    top: 0;
+    width: 90%;
+   }
+   &_item:nth-last-of-type(2) {
+      top: 40%;
+      width: 60%;
+   }
+   &_item:nth-last-of-type(3) {
+      bottom: 0;
+      width: 35%;
+   }
+
+  }
+
+  &-content {
+   
+   list-style-type: none;
+   padding-left: 0;
+  
+   margin: 0;
+
+      &_item {
+      padding: 1.5rem;
+         text-align: left;
+
+      &--inner {
+      text-decoration: none;
+      padding: 1rem;
+      @include font-black;
+      }
+      }
+   }
+   }
+ //footer 
+ .footerlink-group {
+   width: 100%;
+   justify-content: center;
+   grid-template-columns: 1fr;
+   gap: 30px;
+   margin: 3.6rem auto 3.2rem auto;
+   text-align: center;
+ }
+.fv-wrapper{
+   .catchcopy-box {
+      margin: 12rem auto 0rem auto;
+      width: 98%;
+
+      &_enword {
+         line-height: 3rem;
+      }
+      &_sentence {
+         margin-bottom: 3rem;
+      }
+   }
+   .linkicon-box {
+   @include rowFlex;
+   position: static; 
+   margin: 0 auto 3rem auto;
+   justify-content: center;
+
+      &_item {
+         margin: 0 .5rem;
+      }
+   }
+
+   .scrollarrow {
+      padding-left: 0;
+   }
+}
+.newposts-wrapper {
+
+   .newposts-box {
+      grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+      gap: 8px;
+
+      &_item {
+         height: 140px;
+      }
+   }
+}
+}
+
+@include sp-landscape {
+   .fv-wrapper{
+      .catchcopy-box {
+         margin: 2rem auto 0rem auto;
+         width: 98%;
+   
+         &_enword {
+            line-height: 1rem;
+         }
+         &_sentence {
+            margin-bottom: 1rem;
+         }
+      }
+      .linkicon-box {
+      @include rowFlex;
+      position: static; 
+      margin: 0 auto 2rem auto;
+      justify-content: center;
+   
+         &_item {
+            margin: 0 .5rem;
+         }
+      }
+   
+      .scrollarrow {
+         display: none;
+      }
+   }
+   .footerlink-group {
+      width: 100%;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin: 3.6rem auto 3.2rem auto;
+      text-align: center;
+    }
+
+}
