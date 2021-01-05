@@ -50,6 +50,11 @@ main {
  
   &_item {
    margin: 0 0 .7rem 1rem;
+   @include btnhover-before;
+  }
+
+  &_item:hover{
+   @include btnhover-after;
   }
  }
 

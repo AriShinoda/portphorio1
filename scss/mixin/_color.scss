@@ -28,4 +28,12 @@
  color: #00D5E5;
 }
 
+@mixin btnhover-before {
+ transition: ease-in-out .2s;
+ opacity: 1;
+}
+@mixin btnhover-after {
+ opacity: .6;
+}
+
 
