@@ -3,39 +3,113 @@ main {
  max-width: 100%;
 }
 
-.catchcopy-box {
- @include columnFlex;
- justify-content: center;
- text-align: center;
- margin: 0 auto;
- padding: 0;
- width: 70%;
+.fv-wrapper {
+ width: 100%;
+ margin: 0;
+ position: relative;
 
- &_enword {
-  @include fz-sectiontitle(700);
+ .catchcopy-box {
+  @include columnFlex;
+  justify-content: center;
+  text-align: center;
+  margin: 10rem auto 0rem auto;
+  padding: 0;
+  width: 70%;
+ 
+  &_enword {
+   @include fz-sectiontitle(700);
+   font-size: 2rem;
+  }
+
+  &_jpword {
+   margin: 2rem auto 2rem auto; 
+   @include fz-paragraph(500);
+   font-size: 1.05rem;
+   @include obj-blue;
+   padding: .2rem 1rem;
+   @include font-white;
+   letter-spacing: .25rem;
+  }
+ 
+  &_sentence {
+   width: 80%;
+   text-align: center;
+   margin: 1.5rem  auto 7rem auto;
+
+  }
+ }
+ 
+ .linkicon-box {
+  @include columnFlex;
+  justify-content: flex-start;
+  position: absolute;
+  width: 10%;
+  top: 8%;
+  left: 0%;
+ 
+  &_item {
+   margin: 0 0 .7rem 1rem;
+  }
  }
 
- &_sentence {
-  width: 100%;
+ .scrollarrow {
+  writing-mode: vertical-lr;
+  @include inner-width;
+  text-align: center;
+  border-left: .15rem dotted #494949;
+  padding-bottom: 2rem;
  }
 }
 
-.linkicon-box {
- @include rowFlex;
- justify-content: center;
- margin: 0 auto;
- width: 50%;
+//新着記事css。WP組み込み時に利用。
+.newposts-wrapper {
+ @include inner-width;
+ 
+}
+.newposts-box{
+ // display: grid;
+ // grid-template-columns: repeat(autofit, minmax(300px, auto));
+ // gap: 20px;
 
- &_item {
-  margin: 0 1rem;
+ &_item{ 
+  @include columnFlex;
+  justify-content: flex-end;
+  width: 40%;
+  background-color: rgb(36, 36, 36);
+  width: 290px;
+  height: 210px;
+  
+  .newposts-textbox {
+  @include white-bg;
+  background-color: rgb(187, 152, 152);
+  position: relative;
+  overflow: hidden;
+  opacity: .8;
+
+
+   &_title,&_caption {
+    margin: 0;
+    text-align: left;
+    z-index: 1;
+   }
+  } 
+  .newposts-textbox:before {
+   filter:blur(2px);
+   position: absolute;
+   background: inherit;
+  }
+
+  
  }
 }
+
 
 .sectiontitle {
  width: 50%;
- margin: 0 auto;
+ margin: 0 auto 0 auto;
  text-align: center;
- padding: 0 0 3rem 0;
+ padding: 2.5rem 0 3rem 0;
+ @include fz-sectiontitle(700);
 
  &-jp {
   @include fz-paragraph(700);
@@ -46,11 +120,34 @@ main {
  max-width: 100%;
  margin: 0 auto;
 }
-
-// .service-grid {
-//  @include outer-width;
  
-//  &_item {
+.service-grid {
+ @include inner-width;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+ gap: 15px;
 
-//  }
-// }
+ &_item {
+  @include columnFlex;
+ 
+ }
+ .service-gird_inner {
+  @include rowFlex;
+  justify-content: flex-start;
+  width: 100%;
+
+
+  .service-grid_inner--name {
+   margin: auto .8rem;
+   // padding-left: 1rem;
+   // line-height: 2rem;
+   width: 60%;
+   @include fz-subtitle(700);
+  }
+ }
+
+ &--sentence {
+  width: 90%;
+  text-align: left;
+ }
+}

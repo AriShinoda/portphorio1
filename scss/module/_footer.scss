@@ -1,4 +1,39 @@
- .footer-wrapper {
-  @include black-bg;
-  @include font-white;
+.footer-wrapper {
+ @include black-bg;
+ @include font-white;
+
+ .contact-copylight {
+  text-align:center;
+  margin: 0 auto;
+   }
+ }
+
+ .footer-textgroup {
+  @include inner-width;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 35px;
+  justify-content: center;
+
+  &_item {
+   @include columnFlex;
+   justify-content: flex-start;
+
+   &--title {
+    text-align: center;
+    @include fz-subtitle(700);
+   }
+
+   &--sentence {
+    text-align: center;
+   }
+  }
+ }
+
+ .footerlink-group {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 2fr .5fr 2fr 2fr;
  }
