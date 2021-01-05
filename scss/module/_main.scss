@@ -1,8 +1,9 @@
 main {
  margin: 0 auto;
  max-width: 100%;
-}
 
+  
+ }
 .fv-wrapper {
  width: 100%;
  margin: 0;
@@ -65,50 +66,73 @@ main {
 .newposts-wrapper {
  @include inner-width;
  
-}
-.newposts-box{
- // display: grid;
- // grid-template-columns: repeat(autofit, minmax(300px, auto));
- // gap: 20px;
-
- &_item{ 
-  @include columnFlex;
-  justify-content: flex-end;
-  width: 40%;
-  background-color: rgb(36, 36, 36);
-  width: 290px;
-  height: 210px;
+ .newposts-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  gap: 15px;
+  justify-content: center;
   
-  .newposts-textbox {
-  @include white-bg;
-  background-color: rgb(187, 152, 152);
-  position: relative;
-  overflow: hidden;
-  opacity: .8;
+  
+  &_item{ 
+   @include columnFlex;
+   justify-content: flex-end;
+   background-size: cover;
+   height: 190px;
+   background-image: url(../../img/icon/samune-dami.png);
+   text-decoration: none;
+   @include font-black;
+   @include objrarius;
 
-
-   &_title,&_caption {
-    margin: 0;
-    text-align: left;
-    z-index: 1;
+   &--gazo {
+    max-width: 100%;
+    height: auto;
    }
-  } 
-  .newposts-textbox:before {
-   filter:blur(2px);
-   position: absolute;
-   background: inherit;
+   
+   .newposts-textbox {
+   @include white-bg;
+   background: rgb(187, 152, 152);
+   position: relative;
+   overflow: hidden;
+   opacity: .8;
+   @include objrarius;
+ 
+    &_title,&_caption {
+     text-align: left;
+     z-index: 1;
+    }
+    &_title {
+     margin: .5rem .3rem;
+    }
+    &_caption {
+     line-height: 1rem;
+     margin: .3rem .3rem;
+    }
+   }
+ 
+   .newposts-textbox:before {
+    filter:blur(2px);
+    position: absolute;
+    background: inherit;
+   }
   }
+ }
 
-  
+ .allview-btn {
+  width: 30%;
+  margin: 1rem auto;
+  text-align: center;
+ 
+  &_inner {
+   text-decoration: none;
+   @include font-black;
+  }
  }
 }
-
-
 .sectiontitle {
  width: 50%;
  margin: 0 auto 0 auto;
  text-align: center;
- padding: 2.5rem 0 3rem 0;
+ padding: 1rem 0 3rem 0;
  @include fz-sectiontitle(700);
 
  &-jp {
@@ -119,6 +143,7 @@ main {
 .section-wrapper {
  max-width: 100%;
  margin: 0 auto;
+ padding: 2rem 0 0 0;
 }
  
 .service-grid {
@@ -129,25 +154,40 @@ main {
 
  &_item {
   @include columnFlex;
- 
- }
- .service-gird_inner {
-  @include rowFlex;
-  justify-content: flex-start;
+  @include objrarius;
   width: 100%;
+  height: auto;
+  padding: auto;
+  // border: .12rem solid rgba(73, 73, 73, 0.404);
+  transition: ease-in-out .23s;
 
-
-  .service-grid_inner--name {
-   margin: auto .8rem;
-   // padding-left: 1rem;
-   // line-height: 2rem;
-   width: 60%;
-   @include fz-subtitle(700);
+  .service-gird_inner {
+   @include rowFlex;
+   justify-content: flex-start;
+   width: 100%;
+   margin: 1rem 0;
+   
+   img{
+    margin: auto;
+   }
+ 
+   .service-grid_inner--name {
+    margin: auto .8rem;
+    // padding-left: 1rem;
+    // line-height: 2rem;
+    width: 60%;
+    @include fz-subtitle(700);
+   }
+  }
+  &--sentence {
+   width: 90%;
+   margin: 0 0 1rem auto;
+   text-align: left;
   }
  }
 
- &--sentence {
-  width: 90%;
-  text-align: left;
+ &_item:hover {
+  box-shadow: -2px 2px 7px rgba(73, 73, 73, 0.6);
  }
+
 }

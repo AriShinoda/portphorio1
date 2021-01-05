@@ -22,6 +22,10 @@
    &--title {
     text-align: center;
     @include fz-subtitle(700);
+    border: .122rem solid #f9f9f9;
+    padding: .5rem 0;
+    width: 55%;
+    margin: 0 auto;
    }
 
    &--sentence {
@@ -31,9 +35,44 @@
  }
 
  .footerlink-group {
-  width: 80%;
-  margin: 0 auto;
+  width: 65%;
+  margin: 2rem auto 3rem auto;
   justify-content: center;
   display: grid;
-  grid-template-columns: 2fr .5fr 2fr 2fr;
- }
+  grid-template-columns: .5fr .2fr .5fr .7fr;
+  
+
+  &_formbtn {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    @include obj-blue;
+    opacity: .77;
+    border: .3rem solid #00b8c5;
+    text-decoration: none;
+    
+    &--inner {
+      @include font-black;
+      @include fz-subtitle(700);
+      width: 100%;
+      padding-top: 2.5rem;
+      text-align: center;
+      margin: auto;
+      line-height: 2rem;
+    }
+  }
+
+  &_snslink {
+    display: inline-block;
+
+    &--inner {
+      margin: 0 .7rem;
+    }
+  }
+
+
+  
+  &_formbtn,&_word,&_snslink {
+    margin:auto;
+  }
+}
