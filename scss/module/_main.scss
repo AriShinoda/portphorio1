@@ -88,6 +88,7 @@ main {
    text-decoration: none;
    @include font-black;
    @include objrarius;
+   @include transitiontemp;
 
    &--gazo {
     max-width: 100%;
@@ -120,6 +121,10 @@ main {
     position: absolute;
     background: inherit;
    }
+  }
+
+  &_item:hover {
+    @include boxshadowtemp;
   }
  }
 
@@ -161,11 +166,10 @@ main {
  &_item {
   @include columnFlex;
   @include objrarius;
+  @include transitiontemp;
   width: 100%;
   height: auto;
   padding: auto;
-  // border: .12rem solid rgba(73, 73, 73, 0.404);
-  transition: ease-in-out .23s;
 
   .service-gird_inner {
    @include rowFlex;
@@ -193,7 +197,7 @@ main {
  }
 
  &_item:hover {
-  box-shadow: -2px 2px 7px rgba(73, 73, 73, 0.6);
+   @include boxshadowtemp;
  }
 
 }
