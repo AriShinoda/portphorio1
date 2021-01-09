@@ -13,7 +13,7 @@ main {
   @include columnFlex;
   justify-content: center;
   text-align: center;
-  margin: 10rem auto 0rem auto;
+  margin: 14rem auto 0rem auto;
   padding: 0;
   width: 70%;
  
@@ -40,23 +40,6 @@ main {
   }
  }
  
- .linkicon-box {
-  @include columnFlex;
-  justify-content: flex-start;
-  position: absolute;
-  width: 10%;
-  top: 8%;
-  left: 0%;
- 
-  &_item {
-   margin: 0 0 .7rem 1rem;
-   @include btnhover-before;
-  }
-
-  &_item:hover{
-   @include btnhover-after;
-  }
- }
 
  .scrollarrow {
   writing-mode: vertical-lr;
@@ -66,6 +49,45 @@ main {
   padding-bottom: 2rem;
 }
 
+}
+
+.strongpoints-box {
+  display: grid;
+  @include black-bg;
+  @include font-white;
+  grid-auto-flow: column;
+  width: 100%;
+  gap: 25px;
+  grid-template-columns: repeat(autofit, minmax(260px, auto));
+  justify-content: center;
+  opacity: .8;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  &_item {
+    width: 85%;
+    margin: 0 auto;
+    border-right: .17rem solid #00D5E5;
+    border-left: .17rem solid #00D5E5;
+    border-bottom: .17rem solid #00D5E5;
+    border-radius: 0 0 2% 2%;
+
+    &--title{
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      @include obj-blue;
+      @include font-black;
+      @include fz-subtitle(700);
+      line-height:3rem;
+      padding: 1rem auto;
+    }
+    &--sentence{
+      margin: 0 auto;
+      width: 70%;
+      text-align: left;
+    }
+  }
 }
 
 //新着記事css。WP組み込み時に利用。
@@ -199,6 +221,35 @@ main {
  &_item:hover {
    @include boxshadowtemp;
  }
-
 }
+
+.flow-grid {
+  @include inner-width;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  justify-content: center;
+
+  &_item {
+    @include columnFlex;
+    background: #eeeeee;
+    justify-content: flex-start;
+
+    &--inner {
+      @include rowFlex;
+      @include font-white;
+      @include black-bg;
+      justify-content: flex-start;
+    }
+
+    &--sentence {
+      margin: 0 auto;
+      text-align: left;
+      width: 80%;
+      padding: 1rem;
+
+    }
+  }
+ }
 

@@ -1,21 +1,65 @@
 
-.pcnav-bar {
- margin: 0;
+.header-wrapper {
  max-width: 100%;
+ position: relative;
+
+ .linkicon-box {
+  @include columnFlex;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  justify-content: flex-start;
+  position: fixed;
+  width: 10%;
+  top: 50%;
+  left: 0%;
+ 
+  &_item {
+   margin: 0 0 .7rem 1rem;
+   @include btnhover-before;
+  }
+ 
+  &_item:hover{
+   @include btnhover-after;
+  }
+ }
+}
+
+.pcnav-bar {
+ position: fixed;
+ top: 0;
+ left: 0;
+ margin: 0 auto;
+ max-width: 100%;
+ width: 100%;
  @include rowFlex;
  justify-content: space-between;
+ @include black-bg;
+ @include font-white;
 
- .sitename {
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin: 1rem;
+ .pcnav-bar_logobox {
+  @include rowFlex;
+  justify-content: flex-start;
+  padding-left: .8rem;
+
+  &--img {
+   margin: auto;
+  }
+  
+  &--text {
+   font-weight: 700;
+   font-size: 1.8rem;
+   margin: auto;
+   padding-left: 1rem;
+  }
  }
+
 
  .navmenu {
   list-style-type: none;
   @include rowFlex;
   font-weight: 700;
-  margin:1.5rem .5rem 1rem 0;
+  margin:1.5rem .5rem 1.5rem 0;
 
   &-item {
   padding-left: 0;
@@ -24,8 +68,8 @@
    &__link {
     margin: auto;
     text-decoration: none;
-    @include font-black;
     @include fz-paragraph(700);
+    @include font-white;
     transition: ease-in-out .3s;
     position: relative;
     padding-bottom: .3rem;
@@ -38,7 +82,7 @@
     width: 0;
     content: '';
     height: 2px;
-    @include black-bg;
+    @include white-bg;
     transition: all .3s ease 0s;
     border-radius: .9rem;
    }
