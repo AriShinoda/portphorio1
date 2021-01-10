@@ -55,12 +55,11 @@ main {
   display: grid;
   @include black-bg;
   @include font-white;
-  grid-auto-flow: column;
   width: 100%;
   gap: 25px;
-  grid-template-columns: repeat(autofit, minmax(260px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-content: center;
-  opacity: .8;
+  // opacity: .8;
   width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
@@ -109,7 +108,7 @@ main {
    background-image: url(../../img/icon/samune-dami.png);
    text-decoration: none;
    @include font-black;
-   @include objrarius;
+   @include objradius;
    @include transitiontemp;
 
    &--gazo {
@@ -119,11 +118,12 @@ main {
    
    .newposts-textbox {
    @include white-bg;
-   background: rgb(187, 152, 152);
+   @include obj-blue;
+   @include font-black;
    position: relative;
    overflow: hidden;
    opacity: .8;
-   @include objrarius;
+   @include objradius;
  
     &_title,&_caption {
      text-align: left;
@@ -187,7 +187,7 @@ main {
 
  &_item {
   @include columnFlex;
-  @include objrarius;
+  @include objradius;
   @include transitiontemp;
   width: 100%;
   height: auto;
@@ -233,6 +233,8 @@ main {
 
   &_item {
     @include columnFlex;
+    @include objradius;
+
     background: #eeeeee;
     justify-content: flex-start;
 
@@ -240,7 +242,13 @@ main {
       @include rowFlex;
       @include font-white;
       @include black-bg;
+      padding-left: 1rem;
       justify-content: flex-start;
+
+      .inner-title {
+        padding-left: 1rem;
+        
+      }
     }
 
     &--sentence {

@@ -64,6 +64,14 @@
       }
    }
    }
+
+   .strongpoints-box {
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+   }
+
+   .flow-grid {
+      grid-template-columns: repeat(auto-fit , minmax(300px, auto));
+   }
  //footer 
  .footerlink-group {
    width: 100%;

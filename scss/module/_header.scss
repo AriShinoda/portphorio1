@@ -10,13 +10,14 @@
   z-index: 10;
   justify-content: flex-start;
   position: fixed;
-  width: 10%;
-  top: 50%;
-  left: 0%;
+  top: 47%;
+  right: 1%;
  
   &_item {
    margin: 0 0 .7rem 1rem;
    @include btnhover-before;
+   width: 50%;
+   height: 50%;
   }
  
   &_item:hover{
@@ -37,6 +38,7 @@
  @include black-bg;
  @include font-white;
 
+ z-index: 100;
  .pcnav-bar_logobox {
   @include rowFlex;
   justify-content: flex-start;
