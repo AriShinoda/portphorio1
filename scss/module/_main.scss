@@ -33,6 +33,7 @@ main {
   }
  
   &_sentence {
+   font-weight: 500;
    width: 80%;
    text-align: center;
    margin: 1.5rem  auto 7rem auto;
@@ -240,14 +241,13 @@ main {
 
     &--inner {
       @include rowFlex;
-      @include font-white;
-      @include black-bg;
+      @include font-black;
+      @include obj-blue;
       padding-left: 1rem;
       justify-content: flex-start;
 
       .inner-title {
         padding-left: 1rem;
-        
       }
     }
 
@@ -256,7 +256,6 @@ main {
       text-align: left;
       width: 80%;
       padding: 1rem;
-
     }
   }
  }
