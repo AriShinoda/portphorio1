@@ -34,9 +34,10 @@ main {
  
   &_sentence {
    font-weight: 500;
-   width: 80%;
-   text-align: center;
-   margin: 1.5rem  auto 7rem auto;
+   width: 75%;
+   text-align: left;
+   padding-left: 3rem;
+   margin: 1.5rem  auto 3rem auto;
 
   }
  }
@@ -57,34 +58,31 @@ main {
   @include black-bg;
   @include font-white;
   width: 100%;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 10px;
+  grid-template-columns: repeat(3 , 1fr);
   justify-content: center;
-  // opacity: .8;
-  width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
 
   &_item {
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
-    border-right: .17rem solid #00D5E5;
-    border-left: .17rem solid #00D5E5;
-    border-bottom: .17rem solid #00D5E5;
-    border-radius: 0 0 2% 2%;
+    padding-bottom: 1rem;
+    
 
     &--title{
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 1rem auto;
       text-align: center;
-      @include obj-blue;
-      @include font-black;
+      border: .17rem solid #00D5E5;
+      @include font-white;
+      @include objradius;
       @include fz-subtitle(700);
       line-height:3rem;
       padding: 1rem auto;
     }
     &--sentence{
       margin: 0 auto;
-      width: 70%;
+      width: 90%;
       text-align: left;
     }
   }
@@ -228,14 +226,14 @@ main {
   @include inner-width;
   padding: 1rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 2fr);
   gap: 15px;
   justify-content: center;
 
   &_item {
     @include columnFlex;
     @include objradius;
-
+    height: 220px;
     background: #eeeeee;
     justify-content: flex-start;
 

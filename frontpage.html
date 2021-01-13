@@ -10,6 +10,9 @@
  </head>
  <body>
   <header class="header-wrapper">
+    <div class="canvasWrapper">
+      <canvas id="myCanvas"></canvas>
+    </div>
    <div class="pcnav-bar">
      <div class="pcnav-bar_logobox">
       <img class="pcnav-bar_logobox--img" src="/img/icon/sitelogo.svg" alt="logo">
@@ -22,12 +25,15 @@
      <li class="navmenu-item"><a class="navmenu-item__link" href="#contact">Contact</a></li>
     </ul>
    </div>
-   <div class="spnav">
-     <div class="spnav-linebox">
-       <span class="spnav-linebox_item"></span>
-       <span class="spnav-linebox_item"></span>
-       <span class="spnav-linebox_item"></span>
-     </div>
+
+    <div class="spnav-wrapper">
+      <a class="spnav-wrapper_sitelogo" href="#"><img src="img/icon/sitelogo.svg" alt="sitelogo"></a>
+      <div class="spnav-wrapper_linebox">
+        <span class="spnav-wrapper_linebox--item"></span>
+        <span class="spnav-wrapper_linebox--item"></span>
+        <span class="spnav-wrapper_linebox--item"></span>
+        
+      </div>
 
     <!-- <ul class="spnav-content">
       <li class="spnav-content_item"><a class="spnav-content_item--inner
@@ -53,7 +59,7 @@
     <div class="catchcopy-box">
      <span class="catchcopy-box_enword font-en">Providing new value width creativity</span>
      <span class="catchcopy-box_jpword">創造力で　新たな価値を提供する。</span>
-     <p class="catchcopy-box_sentence">Webデザイナー/デベロッパーShinodaのポートフォリオサイトへようこそ！<br>当方は、Webコンテンツ制作/運用における戦略策定から実行支援までを一貫してご提供できることが強みです。御社の魅力を新しい角度から発見し、固定観念にとらわれない[創造力]でカタチにすることで、目標達成＆課題解決にコミット致します。</p>
+     <p class="catchcopy-box_sentence">Webデザイナー/デベロッパーShinodaのポートフォリオサイトへようこそ！<br>当方は、Webコンテンツ制作/運用における戦略策定から実行支援までを一貫してご提供できることが強みです。<br>御社の魅力を新しい角度から発見し、固定観念にとらわれない[創造力]でカタチにすることで、目標達成＆課題解決にコミット致します。</p>
     </div>
     <div class="scrollarrow">scroll</div>
     <div class="bg-anime"></div>
@@ -62,16 +68,16 @@
    <section class="strongpoints section-wrapper">
     <div class="strongpoints-box">
       <div class="strongpoints-box_item">
-        <h3 class="strongpoints-box_item--title">ご相談～納品までを一括担当</h3>
-        <p class="strongpoints-box_item--sentence">ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。</p>
+        <h3 class="strongpoints-box_item--title">一気通貫型の制作</h3>
+        <p class="strongpoints-box_item--sentence">外注や分業を行わずに、一人の担当者が一気通貫でプロジェクトを実行致します。ヒアリングを通して肌感覚で吸収したサイト制作の目的、御社の特性や理念を余すことなく制作物へフィードバック致します。</p>
       </div>
       <div class="strongpoints-box_item">
         <h3 class="strongpoints-box_item--title">「目的」を軸にしたディレクション</h3>
-        <p class="strongpoints-box_item--sentence">ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。</p>
+        <p class="strongpoints-box_item--sentence">当方では、クライアント制作するWebコンテンツに求めている「目的」を軸に設計を行っていきます。クライアントの「意図」や「目的」を正確に汲み取ることが良い制作のスタートラインだと考えております。</p>
       </div>
       <div class="strongpoints-box_item">
-        <h3 class="strongpoints-box_item--title">スピード対応可能</h3>
-        <p class="strongpoints-box_item--sentence">ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。ヒアリング～デザインから実装までを同じ人間が行うことで、最後までブレのない制作を行うことが出来ます。</p>
+        <h3 class="strongpoints-box_item--title">ニーズに応える柔軟なご提案</h3>
+        <p class="strongpoints-box_item--sentence">「急ぎでランディングページが必要になった」<br>「限られた予算でWebサイトが作りたい」<br>といったご相談も歓迎しております。限られたリソースの中でも、最適なプランのご提案でニーズに応えます。</p>
       </div>
     </div>
    </section>
@@ -97,7 +103,7 @@
           <div class="newposts-textbox">
             <h2 class="newposts-textbox_title">記事のたいとるでしゅ</h2>
             <p class="newposts-textbox_caption">記事のキャプションです記事のキャプションです記事のきゃぷしょんです。</p>
-          </div>  
+          </div>
         </a>
         <a href="#" alt="記事ダミー" class="newposts-box_item">
           <div class="newposts-textbox">
@@ -124,7 +130,8 @@
          <img src="img/design/building-icon@3x.png" alt="コーポレートサイト制作">
          <h3 class="service-grid_inner--name">コーポレートサイト制作</h3>
        </div>
-        <p class="service-grid_item--sentence">新規・リニューアルを問わずご相談ください。目的にフィットしたデザイン・機能設計が強みです。</p>
+        <p class="service-grid_item--sentence">新規・リニューアルを問わずご相談ください。目的にフィットしたデザイン・機能設計を行います。
+        </p>
      </div>
      
      <div class="service-grid_item">
@@ -132,15 +139,15 @@
         <img src="img/design/design-icon@3x.png" alt="デザイン">
         <h3 class="service-grid_inner--name">デザイン</h3>
       </div>
-      <p class="service-grid_item--sentence">webサイト/アプリなど各形態で、最適化されたデザインを御提案致します。</p>
+      <p class="service-grid_item--sentence">Webサイト/アプリなどのデザインもお任せください。トレンドを取り入れた先進的なデザインを得意としております。</p>
      </div>
 
      <div class="service-grid_item">
       <div class="service-gird_inner">
         <img src="img/design/code-icon@3x.png" alt="コーディング">
-        <h3 class="service-grid_inner--name">コーディング</h3>
+        <h3 class="service-grid_inner--name">マークアップ</h3>
       </div>
-      <p class="service-grid_item--sentence">W3Cに準拠したHTML,CSSの記述を行います。ベストプラクティスをついｋ</p>
+      <p class="service-grid_item--sentence">W3Cに準拠したコーディングを行っております。効率的で堅牢な記述が行えるよう、日々経験を積み重ねております。</p>
      </div>
 
      <div class="service-grid_item">
@@ -164,7 +171,7 @@
         <img src="img/design/wordpressIcon@3x.png" alt="ワードプレス構築">
         <h3 class="service-grid_inner--name">ワードプレス構築</h3>
       </div>
-      <p class="service-grid_item--sentence">お客様側でより管理のしやすい環境構築や、アップロード作業まで一貫してサポート致します。</p>
+      <p class="service-grid_item--sentence">オリジナルテーマ制作や改修作業を中心にご用命頂いております。お客様側でより管理のしやすい環境構築や、アップロード作業まで一貫してサポート致します。</p>
      </div>
 
      <div class="service-grid_item">
@@ -172,7 +179,7 @@
         <img src="img/design/server-icon@3x.png" alt="サーバー運用・保守">
         <h3 class="service-grid_inner--name">サーバー運用・保守</h3>
       </div>
-      <p class="service-grid_item--sentence">セキュリティ対策やバージョンを常に最新に保ち、健全なサイト運営をサポート致します。</p>
+      <p class="service-grid_item--sentence">PHPやWordpressのバージョンを最新に保ち、サイトの堅牢性を高めます。その他サーバーの管理もお任せください。</p>
      </div>
 
      <div class="service-grid_item">
@@ -180,7 +187,7 @@
         <img src="img/design/lp-icon@3x.png" alt="ランディングページ制作">
         <h3 class="service-grid_inner--name">ランディングページ制作</h3>
       </div>
-      <p class="service-grid_item--sentence">導き出したターゲット像から逆算したデザインやワード、UI/UX設計を行います。</p>
+      <p class="service-grid_item--sentence">顧客となるターゲット像を導き出すことに始まり、適切な導線設計やデザインを行います。</p>
      </div>
     
      <div class="service-grid_item">
@@ -188,7 +195,7 @@
         <img src="img/design/seo-icon@3x.png" alt="SEO内部対策">
         <h3 class="service-grid_inner--name">SEO内部対策</h3>
       </div>
-      <p class="service-grid_item--sentence">新規・リニューアルを問わずご相談ください。目的にフィットしたデザイン・機能設計が強みです。</p>
+      <p class="service-grid_item--sentence">SEOの評価基準は流動的で、頻繁にアップデートが行われています。常に最新の対策が取れるよう実行支援を行います。</p>
      </div>
 
      <div class="service-grid_item">
@@ -196,7 +203,7 @@
         <img src="img/design/ec-icon@3x.png" alt="ECサイト構築">
         <h3 class="service-grid_inner--name">ECサイト構築</h3>
       </div>
-      <p class="service-grid_item--sentence">ECcubeやShopifyなどのプラットフォームをベースに開発を行います。</p>
+      <p class="service-grid_item--sentence">ECcubeやShopifyなどのプラットフォームをベースに開発を行います。小中規模でのECサイトならお任せください。</p>
      </div>
 
      <div class="service-grid_item">
@@ -204,7 +211,7 @@
         <img src="img/design/speed-icon@3x.png" alt="表示速度改善">
         <h3 class="service-grid_inner--name">表示速度改善</h3>
       </div>
-      <p class="service-grid_item--sentence">読み込みのスピードアップ</p>
+      <p class="service-grid_item--sentence">表示速度が遅いことに起因するユーザーの離脱でお困りではありませんか？一度当方にご相談くださいませ。</p>
      </div>
 
      <div class="service-grid_item">
@@ -212,7 +219,7 @@
         <img src="img/design/logo-icon@3x.png" alt="ロゴ作成">
         <h3 class="service-grid_inner--name">ロゴ作成</h3>
       </div>
-      <p class="service-grid_item--sentence">個人の方から法人様まで、魅力を「コンパクト」にカタチに致します。</p>
+      <p class="service-grid_item--sentence">個人の方から法人様まで、サービスや事業の魅力を「コンパクト」にカタチに致します。</p>
      </div>
 
      <div class="service-grid_item">
@@ -220,7 +227,7 @@
         <img src="img/design/hugoIcon@3x.png" alt="Hugoサイト制作">
         <h3 class="service-grid_inner--name">Hugoサイト構築</h3>
       </div>
-      <p class="service-grid_item--sentence">サーバーの管理や更新が煩雑＆小規模なブログサイトが欲しいという方には、Hugoがおすすめです。</p>
+      <p class="service-grid_item--sentence">サーバーの管理や更新が煩雑＆小規模なブログサイトが欲しいという方には、Hugoがおすすめです。脱Wordpressしたい！という方にも。</p>
      </div>
    
     </div>
@@ -252,6 +259,13 @@
        </div>
        <div class="flow-grid_item">
          <div class="flow-grid_item--inner">
+           <img class="inner-icon" src="img/icon/flow-sign-icon.svg" alt="hearing">
+           <h3 class="inner-title">4.納品までの流れを確認＋タスクリストご共有</h3>
+         </div>
+         <p class="flow-grid_item--sentence">制作に向けて、お客様にご準備頂きたい事柄（素材やサーバー/ドメインの取得など。ご案件によって異なります。）の確認＆当方が納品までに行う作業の全体感をご説明致します。<br>合わせて、プロジェクトの進捗が確認できるスプレッドシートをご共有させて頂きます。</p>
+       </div>
+       <div class="flow-grid_item">
+         <div class="flow-grid_item--inner">
            <img class="inner-icon" src="img/icon/flow-material-icon.svg" alt="hearing">
            <h3 class="inner-title">4.素材のご提供</h3>
          </div>
@@ -269,21 +283,21 @@
            <img class="inner-icon" src="img/icon/flow-dev-icon.svg" alt="hearing">
            <h3 class="inner-title">6.デザイン・実装</h3>
          </div>
-         <p class="flow-grid_item--sentence">本番同様のデザインを行い、一度お客様に確認をして頂きます。（修正・変更のリクエストは2回まで無料です）その後ご要件に合わせて実装を行っていきます。</p>
+         <p class="flow-grid_item--sentence">本番同様のデザインを制作し、お客様にご確認頂きます。（修正・変更のリクエストは2回まで無料です）<br>デザインにOKを頂いた段階で実装を行います。コードレビュー＆バグチェック、仮想環境でのテストを行い、本番環境へのアップロードに進みます。</p>
        </div>
        <div class="flow-grid_item">
          <div class="flow-grid_item--inner">
            <img class="inner-icon" src="img/icon/flow-up-icon.svg" alt="hearing">
            <h3 class="inner-title">7.アップロード</h3>
          </div>
-         <p class="flow-grid_item--sentence">ダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキスト</p>
+         <p class="flow-grid_item--sentence">多くの場合はお客様側で取得して頂いたドメインとサーバーを使用してアップロードを行います。お問い合わせフォームやメールの受信設定等の設定も行い、問題なければサイトの制作は完了となります。</p>
        </div>
        <div class="flow-grid_item">
          <div class="flow-grid_item--inner">
            <img class="inner-icon" src="img/icon/flow-cart-icon.svg" alt="hearing">
            <h3 class="inner-title">8.残りの料金をお支払い</h3>
          </div>
-         <p class="flow-grid_item--sentence">ダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキストダミーてきすとダミーテキスト</p>
+         <p class="flow-grid_item--sentence">アップロード後は残りの料金（前金を差し引いた50％）をお支払いいただき、制作は完了となります。基本的には納品した当月の翌月末までのお支払いをお願いしております。</p>
        </div>
       
      </div>
@@ -328,5 +342,7 @@
   <!-- js load -->
   <script src="js/anime.js"></script>
   <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+
  </body>
 </html>
