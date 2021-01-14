@@ -1,6 +1,7 @@
 .footer-wrapper {
- @include black-bg;
- @include font-white;
+ @include bf;
+ @include inner-width;
+ 
 
  .contact-copylight {
   text-align:center;
@@ -13,25 +14,56 @@
     display: grid;
     grid-template-columns: .5fr .2fr .5fr .7fr;
     
-    &_formbtn {
-      width: 135px;
-      height: 135px;
-      border-radius: 50%;
-      @include obj-blue;
-      opacity: .90;
-      box-shadow: -2.5px 3px 9px #00b8c5;
-      border: .3rem solid #00b8c5;
-      text-decoration: none;
+    .allview-btn {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: .16rem;
+      position: relative;
+      display: inline-block;
+      transition: all 0.3s;
+      text-decoration:none;
+      cursor: pointer;
+      pointer-events: auto;
       
-      &--inner {
-        @include font-white;
-        @include fz-subtitle(700);
-        width: 100%;
-        padding-top: 2.5rem;
-        text-align: center;
-        margin: auto;
-        line-height: 2rem;
+      &_inner {
+        font-size: 1.6rem;
+        @include font-black;
       }
+    }
+    
+    a.btn-svg {
+      font-weight: 700;
+      line-height: 54px;
+      width: 240px;
+      height: 54px;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: transparent;
+    }
+    
+    a.btn-svg svg {
+      position: absolute;
+      top: 0;
+      left: 8%;
+      width: 100%;
+      height: 100%;
+    }
+    
+    a.btn-svg svg rect {
+      -webkit-transition: all 400ms ease;
+      transition: all 400ms ease;
+      stroke: #000;
+      stroke-width: 2;
+      stroke-dasharray: 200px, 16px;
+      stroke-dashoffset: 70px;
+    }
+    
+    a.btn-svg:hover svg rect {
+      stroke-dashoffset: 244px;
+      stroke: #00D5E5;
+      color: #00D5E5;
     }
   
     &_snslink {
@@ -54,6 +86,7 @@
 
  .footer-textgroup {
   @include inner-width;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 35px;

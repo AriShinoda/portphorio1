@@ -1,6 +1,6 @@
 
 @mixin white-bg {
- background-color: #f9f9f9;
+ background-color: #f4f4f4;
 }
 
 @mixin black-bg {
@@ -15,13 +15,16 @@
 @mixin obj-blue {
  background-color: #00D5E5;
 }
+@mixin obj-blueTrans {
+ background-color: rgba(0, 214, 229, 0.486);
+}
 
 @mixin font-black {
  color: #222222;
 }
 
 @mixin font-white {
- color: #f9f9f9;
+ color: #f2f2f2;
 }
 
 @mixin font-blue {

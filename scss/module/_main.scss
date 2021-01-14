@@ -10,34 +10,38 @@ main {
  position: relative;
 
  .catchcopy-box {
+   @include inner-width;
   @include columnFlex;
   justify-content: center;
-  text-align: center;
-  margin: 14rem auto 0rem auto;
+  text-align: left;
+  margin: 12rem auto 0rem auto;
   padding: 0;
-  width: 70%;
- 
+  
   &_enword {
    @include fz-sectiontitle(700);
-   font-size: 2rem;
+   font-size: 2.3rem;
   }
 
   &_jpword {
-   margin: 2rem auto 2rem auto; 
+   margin: 2rem 0 2rem 0; 
    @include fz-paragraph(500);
-   font-size: 1.05rem;
+  //  font-size: 1.05rem;
+  font-size: 1.5rem;
    @include obj-blue;
-   padding: .2rem 1rem;
+   padding: .8rem 1rem;
    @include font-white;
    letter-spacing: .25rem;
+   width: 43%;
   }
  
   &_sentence {
    font-weight: 500;
-   width: 75%;
+   width: 35%;
    text-align: left;
-   padding-left: 3rem;
-   margin: 1.5rem  auto 3rem auto;
+  //  padding-left: 3rem;
+  //  padding-right: 1rem;
+  //  margin: 1.5rem  auto 3rem auto;
+   margin: 1.5rem  0 2rem 60%;
 
   }
  }
@@ -45,7 +49,8 @@ main {
 
  .scrollarrow {
   writing-mode: vertical-lr;
-  @include inner-width;
+  
+  margin: 0 auto;
   text-align: center;
   border-left: .12rem dotted #494949;
   padding-bottom: 2rem;
@@ -55,48 +60,73 @@ main {
 
 .strongpoints-box {
   display: grid;
-  @include black-bg;
-  @include font-white;
-  width: 100%;
   gap: 10px;
-  grid-template-columns: repeat(3 , 1fr);
+  grid-template-columns: repeat(1 , 1fr);
   justify-content: center;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 1rem 0;
 
   &_item {
-    width: 95%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    
+    width: 100%;
+    @include rowFlex;
+    justify-content: flex-start;
 
-    &--title{
-      margin: 0 auto 1rem auto;
-      text-align: center;
-      border: .17rem solid #00D5E5;
-      @include font-white;
-      @include objradius;
-      @include fz-subtitle(700);
-      line-height:3rem;
-      padding: 1rem auto;
+    &--inner {
+      width: 55%;
+      margin: .5rem 0;
+      padding-bottom: 1rem;
+      @include columnFlex;
+      justify-content: left;
+
+      .inner-title{
+        margin: .8rem 0;
+        text-align: left;
+        width: 100%;
+        @include bf;
+        @include fz-subtitle(700);
+        padding: 1rem auto;
+        line-height: 1rem;
+        font-size: 2.3rem;
+      }
+      .inner-sentence{
+        // margin: 0 auto;
+        width: 100%;
+        text-align: left;
+      }
     }
-    &--sentence{
-      margin: 0 auto;
-      width: 90%;
-      text-align: left;
+    &--img {
+      margin: auto 0;
     }
+    
+  }
+
+  &_item:nth-of-type(1) {
+   margin-right: 20%;
+   margin-left: 2%;
+  }
+  &_item:nth-of-type(2) {
+    justify-content: flex-end;
+  }
+  
+  &_item:nth-of-type(3) {
+    margin-right: 50%;
+    margin-left: 8%;
+    
   }
 }
 
 //新着記事css。WP組み込み時に利用。
 .newposts-wrapper {
- @include inner-width;
- 
+display: flex;
+flex-flow: row-reverse;
+
  .newposts-box{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   gap: 15px;
+  width: 50%;
   justify-content: center;
+  // margin-left: 50%;
   
   
   &_item{ 
@@ -150,44 +180,90 @@ main {
  }
 
  .allview-btn {
-  width: 30%;
-  margin: 1rem auto;
+  width: 70%;
+  margin: auto;
   text-align: center;
- 
+  font-weight: 700;
+  letter-spacing: .16rem;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s;
+  text-decoration:none;
+  cursor: pointer;
+  pointer-events: auto;
+  
   &_inner {
-   text-decoration: none;
-   @include font-black;
+    font-size: 1.6rem;
+    @include font-black;
   }
- }
 }
-.sectiontitle {
- width: 50%;
- margin: 0 auto 0 auto;
- text-align: center;
- padding: 1rem 0 3rem 0;
- @include fz-sectiontitle(700);
 
- &-jp {
-  @include fz-paragraph(700);
- }
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+  width: 240px;
+  height: 54px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 244px;
+  stroke: #00D5E5;
+  color: #00D5E5;
+}
 }
 
 .section-wrapper {
- max-width: 100%;
+  @include inner-width;
  margin: 0 auto;
- padding: 2rem 0 0 0;
+ padding: 1rem 0 0 0;
+
+ .sectiontitle {
+   @include inner-width;
+  margin: 1,5rem 20% 0 0;
+  text-align: left;
+  padding: 1rem 0 0 2rem;
+  @include fz-sectiontitle(700);
+  font-size: 2.3rem;
+
+  
+  &-jp {
+   @include fz-paragraph(700);
+  }
+ }
 }
  
 .service-grid {
- @include inner-width;
+//  @include inner-width;
+ margin: 0 auto;
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
  gap: 15px;
 
  &_item {
   @include columnFlex;
-  @include objradius;
+  // @include objradius;
   @include transitiontemp;
+  @include bf;
   width: 100%;
   height: auto;
   padding: auto;
@@ -214,16 +290,15 @@ main {
    width: 90%;
    margin: 0 auto .5rem auto;
    text-align: left;
+   padding-left: .5rem;
   }
  }
 
- &_item:hover {
-   @include boxshadowtemp;
- }
 }
 
 .flow-grid {
   @include inner-width;
+  margin: 0 auto;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -234,12 +309,11 @@ main {
     @include columnFlex;
     @include objradius;
     height: 220px;
-    background: #eeeeee;
+    @include bf;
     justify-content: flex-start;
 
     &--inner {
       @include rowFlex;
-      @include font-black;
       @include obj-blue;
       padding-left: 1rem;
       justify-content: flex-start;
@@ -256,5 +330,6 @@ main {
       padding: 1rem;
     }
   }
+
  }
 

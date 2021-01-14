@@ -13,7 +13,7 @@
      });
      renderer.setPixelRatio(window.devicePixelRatio);
      renderer.setSize(window.innerWidth, window.innerHeight);
-     renderer.setClearColor(0xaaaaaa);
+     renderer.setClearColor(0xf4f4f4);
 
      // シーンを作成
      const scene = new THREE.Scene();
@@ -41,7 +41,7 @@
        // 一つ一つのサイズ
        size: 12,
        // 色
-       color: 0x494949,
+       color: 0x111111,
        blending: THREE.AdditiveBlending,
      });
 
