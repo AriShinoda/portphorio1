@@ -12,7 +12,7 @@ main {
   @include columnFlex;
   justify-content: center;
   text-align: left;
-  margin: 12rem auto 0rem auto;
+  margin: 14rem auto 0rem auto;
   padding: 0;
   
   &_enword {
@@ -40,7 +40,7 @@ main {
    font-weight: 500;
    width: 35%;
    text-align: left;
-   margin: 1.5rem  0 4rem 60%;
+   margin: 1.5rem  0 2rem 60%;
   }
  }
  
@@ -222,8 +222,7 @@ a.btn-svg svg rect {
 
 a.btn-svg:hover svg rect {
   stroke-dashoffset: 244px;
-  stroke: #00D5E5;
-  color: #00D5E5;
+  stroke: #007bbb;
 }
 }
 
@@ -314,6 +313,7 @@ a.btn-svg:hover svg rect {
       justify-content: flex-start;
 
       .inner-title {
+        @include font-white;
         padding-left: 1rem;
       }
     }

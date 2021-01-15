@@ -76,7 +76,7 @@
      // 配置する範囲
      const SIZE = 3000;
      // 配置する個数
-     const LENGTH = 4000;
+     const LENGTH = 2000;
      for (let i = 0; i < LENGTH; i++) {
        geometry.vertices.push(new THREE.Vector3(
          SIZE * (Math.random() - 0.5),
@@ -84,13 +84,15 @@
          SIZE * (Math.random() - 0.5),
        ));
      }
+
+     
      // マテリアルを作成
      const material = new THREE.PointsMaterial({
        // 一つ一つのサイズ
-       size: 12,
+       size: 19,
        // 色
-       color: 0x111111,
-       blending: THREE.AdditiveBlending,
+       color: 0x007bbb,
+      //  blending: THREE.AdditiveBlending,
      });
 
      const mesh = new THREE.Points(geometry, material);

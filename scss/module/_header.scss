@@ -38,14 +38,16 @@
  width: 100%;
  @include rowFlex;
  justify-content: space-between;
- @include black-bg;
+ @include obj-blue;
  @include font-white;
 
  z-index: 100;
  .pcnav-bar_logobox {
   @include rowFlex;
+  @include font-white;
   justify-content: flex-start;
   padding-left: .8rem;
+  text-decoration: none;
 
   &--img {
    margin: auto;
