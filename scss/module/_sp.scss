@@ -11,6 +11,31 @@
 
  .header-wrapper {
     position: relative;
+
+    .spnav-content {
+      display: inherit;
+      position: fixed;
+      top: 0;
+      right: -430px;
+      width: 100%;
+      height: 100vh;
+      @include black-bg;
+      list-style-type: none;
+      z-index: 100;
+
+            &_item {
+            padding: 1.5rem;
+            text-align: left;
+            
+               &--inner {
+               text-decoration: none;
+               padding: 1rem;
+               @include font-white;
+               font-size: 1.2rem;
+               letter-spacing: .12rem;
+               }
+            }
+         }
     
    .spnav-wrapper {
    position: fixed;
@@ -54,31 +79,45 @@
          width: 35%;
       }
    }
-      &-content {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-         &_item {
-         padding: 1.5rem;
-            text-align: left;
-
-            &--inner {
-            text-decoration: none;
-            padding: 1rem;
-            @include font-black;
-            }
-         }
-      }
+     
    }
  }
-
+ 
    .strongpoints-box {
-      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+      &_item {
+         @include columnFlex;
+         justify-content: center;
+
+         &--inner {
+            width: 100%;
+            .inner-title {
+               line-height: 2.9rem;
+            }
+         }
+
+         &--img {
+            display: none;
+         }
+      }
+      &_item:nth-of-type(1) {
+         background-image:url(../../img/icon/strongicon-1.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+      }
+      &_item:nth-of-type(2) {
+         background-image:url(../../img/icon/strongicon-2.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+      }
+      &_item:nth-of-type(3) {
+         background-image:url(../../img/icon/strongicon-3.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+      }
    }
 
    .flow-grid {
       grid-template-columns: repeat(auto-fit , minmax(280px, auto));
-
       &_item {
          height: auto;
       }
@@ -98,6 +137,8 @@
  }
 
    .fv-wrapper{
+      position: relative;
+
       .catchcopy-box {
          margin: 12rem auto 0rem auto;
          width: 98%;
@@ -107,21 +148,18 @@
          }
          &_jpword {
             padding: .4rem 1rem;
+            width: 46%;
+            line-height: 2rem;
+            margin-left: 10rem;
+
+            br {
+               display: inherit;
+            }
          }
          &_sentence {
-            margin-bottom: 3rem;
             padding-left: 0;
-         }
-      }
-
-      .linkicon-box {
-      @include rowFlex;
-      position: static; 
-      margin: 0 auto 3rem auto;
-      justify-content: center;
-
-         &_item {
-            margin: 0 .5rem;
+            width: 80%;
+            margin: 1.5rem 0 3rem 1rem;
          }
       }
 
@@ -129,11 +167,28 @@
          padding-left: 0;
       }
    }
-   .newposts-wrapper {
 
+   .header-wrapper {
+
+      .linkicon-box {
+      display: none;
+      // @include rowFlex;
+      // position: static; 
+      // margin: 0 auto 3rem auto;
+      // justify-content: center;
+   
+         &_item {
+            margin: 0 .5rem;
+         }
+      }
+   }
+   .newposts-wrapper {
+      flex-direction: column;
       .newposts-box {
+         width: 100%;
          grid-template-columns: repeat(auto-fit, minmax(160px, auto));
          gap: 8px;
+         padding-bottom: 2rem;
 
          &_item {
             height: 140px;
@@ -148,33 +203,42 @@
 }
 
 @include sp-landscape {
+
+   .header-wrapper {
+      .spnav-content {
+         display: none;
+       }
+   }
    .fv-wrapper{
       .catchcopy-box {
-         margin: 2rem auto 0rem auto;
+         margin: 12rem auto 0rem auto;
          width: 98%;
-   
+
          &_enword {
-            line-height: 1rem;
+            line-height: 3rem;
+         }
+         &_jpword {
+            padding: .4rem 1rem;
+            width: 46%;
+            line-height: 2rem;
+            margin-left: 10rem;
+
+            br {
+               display: inherit;
+            }
          }
          &_sentence {
-            margin-bottom: 1rem;
+            padding-left: 0;
+            width: 80%;
+            margin: 1.5rem 0 3rem 1rem;
          }
       }
-      .linkicon-box {
-      @include rowFlex;
-      position: static; 
-      margin: 0 auto 2rem auto;
-      justify-content: center;
-   
-         &_item {
-            margin: 0 .5rem;
-         }
-      }
-   
+
       .scrollarrow {
-         display: none;
+         padding-left: 0;
       }
    }
+    
 
    .footer-wrapper {
 
@@ -187,23 +251,65 @@
          text-align: center;
        }
    }
-
-   //  .pcnav-bar {
-   //    width: 70%;
-   //     .nav-menu {
-   //        display: none;
-   //     }
-   //  }
-
-    .service-grid {
       &_item {
          height: 170px;
+      }
+   
+
+   .flow-grid {
+      grid-template-columns: repeat(1, 600px);
+   }
+
+   .strongpoints-box {
+      &_item {
+         @include columnFlex;
+         justify-content: center;
+
+         &--inner {
+            width: 100%;
+            .inner-title {
+               line-height: 2.5rem;
+            }
+         }
+
+         &--img {
+            display: none;
+         }
+      }
+      &_item:nth-of-type(1) {
+         background-image:url(../../img/icon/strongicon-1.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+      }
+      &_item:nth-of-type(2) {
+         background-image:url(../../img/icon/strongicon-2.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+      }
+      &_item:nth-of-type(3) {
+         background-image:url(../../img/icon/strongicon-3.svg);
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
       }
    }
 
    .flow-grid {
-      grid-template-columns: repeat(1, 600px);
-
+      grid-template-columns: repeat(auto-fit , minmax(280px, auto));
+      &_item {
+         height: auto;
+      }
    }
+   .newposts-wrapper {
+      flex-direction: column;
+      .newposts-box {
+         width: 100%;
+         grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+         gap: 8px;
+         padding-bottom: 2rem;
 
+         &_item {
+            height: 140px;
+         }
+      }
+   }
 }

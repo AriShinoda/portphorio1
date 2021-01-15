@@ -1,14 +1,12 @@
 main {
  margin: 0 auto;
  max-width: 100%;
-
-  
  }
 .fv-wrapper {
  width: 100%;
  margin: 0;
  position: relative;
-
+ 
  .catchcopy-box {
    @include inner-width;
   @include columnFlex;
@@ -32,47 +30,44 @@ main {
    @include font-white;
    letter-spacing: .25rem;
    width: 43%;
+
+   br {
+     display: none;
+   }
   }
  
   &_sentence {
    font-weight: 500;
    width: 35%;
    text-align: left;
-  //  padding-left: 3rem;
-  //  padding-right: 1rem;
-  //  margin: 1.5rem  auto 3rem auto;
-   margin: 1.5rem  0 2rem 60%;
-
+   margin: 1.5rem  0 4rem 60%;
   }
  }
  
-
  .scrollarrow {
   writing-mode: vertical-lr;
-  
   margin: 0 auto;
   text-align: center;
   border-left: .12rem dotted #494949;
   padding-bottom: 2rem;
 }
-
 }
 
 .strongpoints-box {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(1 , 1fr);
+  grid-template-columns: repeat(auto-fit, auto);
   justify-content: center;
   margin: 0 auto;
   padding: 1rem 0;
 
   &_item {
-    width: 100%;
+    width: 90%;
     @include rowFlex;
     justify-content: flex-start;
 
     &--inner {
-      width: 55%;
+      width: 60%;
       margin: .5rem 0;
       padding-bottom: 1rem;
       @include columnFlex;
@@ -85,7 +80,7 @@ main {
         @include bf;
         @include fz-subtitle(700);
         padding: 1rem auto;
-        line-height: 1rem;
+        line-height: 3rem;
         font-size: 2.3rem;
       }
       .inner-sentence{

@@ -2,6 +2,9 @@
 .header-wrapper {
  max-width: 100%;
  position: relative;
+  .spnav-content {
+   display: none;
+ }
 
  .linkicon-box {
   @include columnFlex;
