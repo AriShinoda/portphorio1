@@ -6,7 +6,8 @@ body {
  position: relative;
  @include white-bg;
  @include fm-jp;
- @include font-black;
+//  @include font-black;
+ @include font-white;
  @include fz-paragraph(400);
 }
 .canvasWrapper {

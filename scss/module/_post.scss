@@ -1,0 +1,89 @@
+.contact-wrapper {
+ margin: 3rem auto 0 auto;
+ @include inner-width;
+
+ .formbox {
+  @include columnFlex;
+  margin: 0 auto 3rem auto;
+  justify-content: center;
+  @include bf;
+
+  &-item {
+   @include columnFlex;
+   justify-content: flex-start;
+   width: 60%;
+   margin: 1rem auto;
+
+   &_label {
+    @include fz-subtitle(500);
+
+    &--mast {
+     @include font-white;
+     @include fz-paragraph(500);
+     @include obj-blue;
+     padding: .3rem;
+     margin: 0 .5rem 0 auto;
+     @include objradius;
+     
+    }
+   }
+
+   &_inner {
+    @include columnFlex;
+    justify-content: start;
+
+    &--input {
+     height: 30px;
+     border: .17rem solid #007bbb;
+     @include objradius;
+    }
+    
+    &--textarea {
+     border: .17rem solid #007bbb;
+     height: 120px;
+     @include objradius;
+    }
+
+    &--error {
+     color: rgb(221, 71, 71);
+    }
+   }
+
+   %_radio {
+    @include columnFlex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--inner {
+     @include rowFlex;
+    
+
+     .radio-btn {
+      
+     }
+     .radio-txt {
+      @include fz-paragraph(500);
+     }
+    }
+   }
+  }
+
+  &-btnwrapper {
+   width: 50%;
+   margin: 0 auto;
+   text-align: center;
+
+   &_inner {
+    cursor: pointer;
+    @include black-bg;
+    @include font-white;
+    padding: 1rem;
+    font-family: 'Noto Sans JP',sans-serif;
+    border: none;
+    @include objradius;
+    margin: 1rem auto;
+   }
+  }
+
+ }
+}

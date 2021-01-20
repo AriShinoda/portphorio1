@@ -61,7 +61,7 @@
      });
      renderer.setPixelRatio(window.devicePixelRatio);
      renderer.setSize(window.innerWidth, window.innerHeight);
-     renderer.setClearColor(0xf4f4f4);
+     renderer.setClearColor(0x000000);
 
      // シーンを作成
      const scene = new THREE.Scene();
