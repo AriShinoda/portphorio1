@@ -12,7 +12,7 @@ main {
   @include columnFlex;
   justify-content: center;
   text-align: left;
-  margin: 14rem auto 0rem auto;
+  margin: 12rem auto 0rem auto;
   padding: 0;
   
   &_enword {
@@ -21,17 +21,17 @@ main {
   }
   
   &_jpword {
+    position: relative;
     margin: 1.3rem 0 2rem 0; 
     @include fz-paragraph(400);
-    //  font-size: 1.05rem;
-    @include bf-blue;
-  font-size: 1.45rem;
-  //  @include obj-blue;
-   padding: .4rem .6rem;
-   @include font-white;
-   letter-spacing: .25rem;
-   width: 43%;
+    font-size: 1.15rem;
+    padding: .4rem .6rem;
+    @include font-white;
+    letter-spacing: .25rem;
+    width: 57%;
+    text-align: right;
 
+    
    br {
      display: none;
    }
@@ -40,76 +40,118 @@ main {
   &_sentence {
    @include bf;
    padding: 1rem;
-   font-weight: 500;
    width: 35%;
    text-align: left;
    margin: 1.5rem  0 2rem 0;
   }
  }
- 
- .scrollarrow {
-  writing-mode: vertical-lr;
+ .scrollarrow-wrapper {
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
   margin: 0 auto;
-  text-align: center;
-  border-left: .12rem dotted #494949;
-  padding-bottom: 2rem;
-}
+  width: 100%;
+  @include columnFlex;
+  justify-content: center;
+  // text-align: right;
+  margin: 0 auto;
+
+  &_inner {
+    margin: 0 auto;
+    width: 30%;
+    padding-left: 23rem;
+
+    &--text {
+      writing-mode: vertical-lr;
+      margin: 0;
+      text-align: center;
+      width: 1.2%;
+      
+      line-height: .3rem;
+      // border-left: .12rem dotted #494949;
+      // padding-bottom: 2rem;
+      // overflow: hidden;
+    }
+
+     .scrollarrow {
+      background-color: rgba(0, 248, 0, 0);
+      height: 70px;
+      width: 1%;
+      overflow: hidden;
+     }
+     
+     .scrollarrow:after{
+      content:"";
+      display: block;
+      width: .2rem;
+      @include objradius;
+      border-left:.2rem rgb(255, 255, 255) solid;
+      animation:scroll 2s ease 0s infinite normal;
+      margin: 0;
+     }
+  }
+
+   @keyframes scroll{
+    0%{
+      height: 0;
+    }
+    50%{
+      height: 70px;
+      margin-top: 0;
+    }
+    100%{
+      margin-top: 70px;
+      height: 70px;
+    }
+   }
+ }
 }
 
 .strongpoints-box {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, auto);
+  grid-template-columns: repeat(auto-fit, 400px);
   justify-content: center;
   margin: 0 auto;
   padding: 1rem 0;
 
   &_item {
-    width: 90%;
-    @include rowFlex;
-    justify-content: flex-start;
-    @include bf;
+   
 
     &--inner {
-      width: 60%;
+      width: 90%;
       margin: .5rem 0;
       padding-bottom: 1rem;
       @include columnFlex;
-      justify-content: left;
+      justify-content: center;
 
       .inner-title{
         margin: .8rem 0;
-        text-align: left;
+        text-align: center;
         width: 100%;
-        @include bf;
+        // @include bf;
         @include fz-subtitle(700);
         padding: 1rem auto;
         line-height: 3rem;
-        font-size: 2.3rem;
+        font-size: 1.4rem;
+        border-bottom: .1rem solid #f2f2f2;
+
+        &_num {
+          @include fz-subtitle(500);
+          font-size: 1.4rem;
+
+        }
       }
       .inner-sentence{
-        // margin: 0 auto;
-        width: 100%;
+        @include fz-paragraph(400);
+        width: 95%;
         text-align: left;
+        margin: 1rem auto 0 auto;
       }
     }
     &--img {
       margin: auto 0;
     }
-    
-  }
-
-  &_item:nth-of-type(1) {
-   margin-right: 20%;
-   margin-left: 2%;
-  }
-  &_item:nth-of-type(2) {
-    justify-content: flex-end;
-  }
-  
-  &_item:nth-of-type(3) {
-    margin-right: 50%;
-    margin-left: 8%;
     
   }
 }
@@ -119,135 +161,156 @@ main {
 display: flex;
 flex-flow: row-reverse;
 
- .newposts-box{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-  gap: 15px;
-  width: 50%;
-  justify-content: center;
-  // margin-left: 50%;
-  
-  
-  &_item{ 
-   @include columnFlex;
-   justify-content: flex-end;
-   background-size: cover;
-   height: 190px;
-   background-image: url(../../img/icon/samune-dami.png);
-   text-decoration: none;
-   @include font-black;
-   @include objradius;
-   @include transitiontemp;
-
-   &--gazo {
-    max-width: 100%;
-    height: auto;
-   }
-   
-   .newposts-textbox {
-   @include white-bg;
-   @include obj-blue;
-   @include font-black;
-   position: relative;
-   overflow: hidden;
-   opacity: .8;
-   @include objradius;
- 
-    &_title,&_caption {
-     text-align: left;
-     z-index: 1;
-    }
-    &_title {
-     margin: .5rem .3rem;
-    }
-    &_caption {
-     line-height: 1rem;
-     margin: .3rem .3rem;
-    }
-   }
- 
-   .newposts-textbox:before {
-    filter:blur(2px);
-    position: absolute;
-    background: inherit;
-   }
-  }
-
-  &_item:hover {
-    @include boxshadowtemp;
-  }
- }
-
- .allview-btn {
-  width: 70%;
+&_pre {
   margin: auto;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: .16rem;
-  position: relative;
-  display: inline-block;
-  transition: all 0.3s;
-  text-decoration:none;
-  cursor: pointer;
-  pointer-events: auto;
+  padding: 6rem 8rem;
+  background-color: tomato;
+}
+
+//  .newposts-box{
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+//   gap: 15px;
+//   width: 50%;
+//   justify-content: center;
+//   // margin-left: 50%;
   
-  &_inner {
-    font-size: 1.6rem;
-    @include font-black;
-  }
-}
+  
+//   &_item{ 
+//    @include columnFlex;
+//    justify-content: flex-end;
+//    background-size: cover;
+//    height: 190px;
+//    background-image: url(../../img/icon/samune-dami.png);
+//    text-decoration: none;
+//    @include font-black;
+//    @include objradius;
+//    @include transitiontemp;
 
-a.btn-svg {
-  font-weight: 700;
-  line-height: 54px;
-  width: 240px;
-  height: 54px;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: transparent;
-}
+//    &--gazo {
+//     max-width: 100%;
+//     height: auto;
+//    }
+   
+//    .newposts-textbox {
+//    @include white-bg;
+//    @include obj-blue;
+//    @include font-black;
+//    position: relative;
+//    overflow: hidden;
+//    opacity: .8;
+//    @include objradius;
+ 
+//     &_title,&_caption {
+//      text-align: left;
+//      z-index: 1;
+//     }
+//     &_title {
+//      margin: .5rem .3rem;
+//     }
+//     &_caption {
+//      line-height: 1rem;
+//      margin: .3rem .3rem;
+//     }
+//    }
+ 
+//    .newposts-textbox:before {
+//     filter:blur(2px);
+//     position: absolute;
+//     background: inherit;
+//    }
+//   }
 
-a.btn-svg svg {
-  position: absolute;
-  top: 0;
-  left: 8%;
-  width: 100%;
-  height: 100%;
-}
+//   &_item:hover {
+//     @include boxshadowtemp;
+//   }
+//  }
 
-a.btn-svg svg rect {
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
-  stroke: #000;
-  stroke-width: 2;
-  stroke-dasharray: 200px, 16px;
-  stroke-dashoffset: 70px;
-}
+//  .allview-btn {
+//   width: 70%;
+//   margin: auto;
+//   text-align: center;
+//   font-weight: 700;
+//   letter-spacing: .16rem;
+//   position: relative;
+//   display: inline-block;
+//   transition: all 0.3s;
+//   text-decoration:none;
+//   cursor: pointer;
+//   pointer-events: auto;
+  
+//   &_inner {
+//     font-size: 1.6rem;
+//     @include font-black;
+//   }
+// }
 
-a.btn-svg:hover svg rect {
-  stroke-dashoffset: 244px;
-  stroke: #007bbb;
-}
+// a.btn-svg {
+//   font-weight: 700;
+//   line-height: 54px;
+//   width: 240px;
+//   height: 54px;
+//   cursor: pointer;
+//   text-decoration: none;
+//   background-color: transparent;
+// }
+
+// a.btn-svg svg {
+//   position: absolute;
+//   top: 0;
+//   left: 8%;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// a.btn-svg svg rect {
+//   -webkit-transition: all 400ms ease;
+//   transition: all 400ms ease;
+//   stroke: #000;
+//   stroke-width: 2;
+//   stroke-dasharray: 200px, 16px;
+//   stroke-dashoffset: 70px;
+// }
+
+// a.btn-svg:hover svg rect {
+//   stroke-dashoffset: 244px;
+//   stroke: #007bbb;
+// }
 }
 
 .section-wrapper {
   @include inner-width;
+  @include bf;
  margin: 0 auto;
- padding: 1rem 0 0 0;
+ padding: 1rem 0 2.5rem 0;
 
- .sectiontitle {
+ .sectiontitle-wrapper {
    @include inner-width;
-  margin: 1,5rem 20% 0 0;
-  text-align: left;
-  padding: 1rem 0 0 2rem;
-  @include fz-sectiontitle(700);
-  font-size: 2.3rem;
+   margin: 1,5rem 20% 1.5rem 0;
+   text-align: left;
+   padding: 1rem 0 1.5rem 2rem;
 
+   &_h2 {
+    @include fz-sectiontitle(700);
+    font-size: 2.3rem;
+    margin: 0;
   
-  &-jp {
-   @include fz-paragraph(700);
-  }
+    &--jp {
+     @include fz-paragraph(700);
+     margin-bottom: 0;
+    }
+   }
+
+   &_p {
+    margin: 1rem 0 0 0;
+   }
+  //  &_p::before {
+  //   width: 20px;
+  //   height: 2px;
+  //   background:rgb(255, 255, 255);
+  //  }
  }
+
 }
  
 .service-grid {
@@ -261,7 +324,6 @@ a.btn-svg:hover svg rect {
   @include columnFlex;
   // @include objradius;
   @include transitiontemp;
-  @include bf;
   width: 100%;
   height: auto;
   padding: auto;
@@ -307,12 +369,12 @@ a.btn-svg:hover svg rect {
     @include columnFlex;
     @include objradius;
     height: 220px;
-    @include bf;
     justify-content: flex-start;
 
     &--inner {
       @include rowFlex;
       @include obj-blue;
+      @include objradius;
       padding-left: 1rem;
       justify-content: flex-start;
 

@@ -4,7 +4,7 @@ body {
  margin: 0 auto;
  width: 100%;
  position: relative;
- @include white-bg;
+ @include black-bg;
  @include fm-jp;
 //  @include font-black;
  @include font-white;
@@ -106,7 +106,7 @@ $easing: ease;
       visibility: hidden;
         &::after {
           content: "";
-          background:  #222;
+          background:  #f2f2f2;
           width: 100%;
           height: 100%;
           position: absolute;
@@ -126,4 +126,9 @@ $easing: ease;
             }
         }
     }
+}
+
+::selection {
+  background: tomato;
+  @include font-white;
 }

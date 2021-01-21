@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Azure Design</title>
  </head>
- <body>
+ <body class="container">
    
   <header id="top" class="header-wrapper">
     <div class="canvasWrapper">
@@ -25,7 +25,7 @@
      <li class="navmenu-item"><a class="navmenu-item__link" href="#flow">Flow</a></li>
      <li class="navmenu-item"><a class="navmenu-item__link" href="#contact">Contact</a></li>
     </ul>
-   </div> 
+   </div>
 
     <div class="spnav-wrapper">
       <a class="spnav-wrapper_sitelogo" href="#"><img src="img/icon/sitelogo.svg" alt="sitelogo"></a>
@@ -39,6 +39,7 @@
       <a class="linkicon-box_item"  href="#"><img src="img/icon/twitter-icon.svg" alt="twitter"></a>
       <a class="linkicon-box_item" href="#"><img src="img/icon/insta-icon.svg" alt="instagram"></a>
     </div>
+    
 
      <ul id="spnav-content" class="spnav-content">
       <li class="spnav-content_item"><a class="spnav-content_item--inner
@@ -61,42 +62,52 @@
      <span class="catchcopy-box_jpword">創造力で　<br>新たな価値を提供する。</span>
      <p class="catchcopy-box_sentence">Azure disignは、デザイナー/デベロッパーの篠田が運営する個人フリーランスのWeb制作事務所です。<br>御社の魅力を新しい角度から発見し、固定観念にとらわれない[創造力]でカタチにすることで、目標達成＆課題解決にコミット致します。</p>
     </div>
-    <div class="scrollarrow">scroll</div>
+   
+    <div class="scrollarrow-wrapper">
+      <div class="scrollarrow-wrapper_inner">
+        <span class="scrollarrow-wrapper_inner--text">Scroll</span>
+        <div class="scrollarrow"></div>
+      </div>
+    </div>
    </div>
 
    <section class="strongpoints section-wrapper">
+    <div class="sectiontitle-wrapper">
+      <h2 class="sectiontitle-wrapper_h2 font-en">Strongths<br><span class="sectiontitle-wrapper_h2--jp font-jp">強み</span></h2>
+      <p class="sectiontitle-wrapper_p"></p>
+    </div>
+
     <div class="strongpoints-box">
       <div class="strongpoints-box_item">
         <div class="strongpoints-box_item--inner mask_animation mask-wrap">
-            <h3 class="inner-title mask-inner">一気通貫型の制作</h3>
+            <h3 class="inner-title mask-inner">1.中継ぎなしの一気通貫</h3>
           <p class="inner-sentence">外注や分業を行わずに、一人の担当者が一気通貫でプロジェクトを実行致します。ヒアリングを通して肌感覚で吸収したサイト制作の目的、御社の特性や理念を余すことなく制作物へフィードバック致します。</p>
         </div>
-          <img class="strongpoints-box_item--img" src="img/icon/strongicon-1.svg" alt="一気通貫型の制作">
       </div>
       <div class="strongpoints-box_item">
         <div class="strongpoints-box_item--inner mask_animation mask-wrap">
-          <h3 class="inner-title mask-inner">「目的」を軸にしたディレクション</h3>
+          <h3 class="inner-title mask-inner">2.「目的」を軸にした設計</h3>
           <p class="inner-sentence">当方では、クライアント制作するWebコンテンツに求めている「目的」を軸に設計を行っていきます。クライアントの「意図」や「目的」を正確に汲み取ることが良い制作のスタートラインだと考えております。</p>
         </div>
-        <img class="strongpoints-box_item--img" src="img/icon/strongicon-2.svg" alt="ディレクション">
       </div>
       <div class="strongpoints-box_item">
         <div class="strongpoints-box_item--inner mask_animation mask-wrap">
-          <h3 class="inner-title mask-inner">ニーズに応える柔軟なご提案</h3>
+          <h3 class="inner-title mask-inner">3.ニーズに応える柔軟なご提案</h3>
           <p class="inner-sentence">「急ぎでランディングページが必要になった」<br>「限られた予算でWebサイトが作りたい」<br>といったご相談も歓迎しております。限られたリソースの中でも、最適なプランのご提案でニーズに応えます。</p>
         </div>
-        <img class="strongpoints-box_item--img" src="img/icon/strongicon-3.svg" alt="ニーズ">
       </div>
     </div>
    </section>
 
    <section id="newposts" class="section-wrapper isFadeIn">
-     <div class="sectiontitle-wrapper">
-       <h2 class="sectiontitle font-en">New Posts<br><span class="sectiontitle-jp font-jp">新着投稿</span></h2>
-     </div>
+    <div class="sectiontitle-wrapper">
+      <h2 class="sectiontitle-wrapper_h2 font-en">Blog<br><span class="sectiontitle-wrapper_h2--jp font-jp">新着投稿</span></h2>
+      <p class="sectiontitle-wrapper_p"></p>
+    </div>
 
     <div class="newposts-wrapper">
-      <div class="newposts-box">
+      <span class="newposts-wrapper_pre">公開準備中。</span>
+      <!-- <div class="newposts-box">
         <a href="#" alt="記事ダミー" class="newposts-box_item">
           <div class="newposts-textbox">
             <h2 class="newposts-textbox_title">タイトルのダミーです（１６文字）</h2>
@@ -130,17 +141,20 @@
           </svg>
           <span class="allview-btn_inner font-jp" href="#">ブログを見る</span>
         </a>
-      </div>
+      </div> -->
     </div>
    </section>
 
    <section id="service" class="section-wrapper">
-    <h2 class="sectiontitle font-en">Service<br><span class="sectiontitle-jp font-jp">サービス</span></h2>
+    <div class="sectiontitle-wrapper">
+      <h2 class="sectiontitle-wrapper_h2 font-en">Service<br><span class="sectiontitle-wrapper_h2--jp font-jp">サービス</span></h2>
+      <p class="sectiontitle-wrapper_p">ーWordpress構築からSEO対策まで、幅広くカバー致します。</p>
+    </div>
 
     <div class="service-grid">
      <div class="service-grid_item isFadeIn">
        <div class="service-gird_inner">
-         <img src="img/design/building-icon@3x.png" alt="コーポレートサイト制作">
+         <img src="img/icon/colpolate-icon.svg" alt="コーポレートサイト制作">
          <h3 class="service-grid_inner--name">コーポレートサイト制作</h3>
        </div>
         <p class="service-grid_item--sentence">新規・リニューアルを問わずご相談ください。目的にフィットしたデザイン・機能設計を行います。
@@ -149,7 +163,7 @@
      
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/design-icon@3x.png" alt="デザイン">
+        <img src="img/icon/design-icon.svg" alt="デザイン">
         <h3 class="service-grid_inner--name">デザイン</h3>
       </div>
       <p class="service-grid_item--sentence">Webサイト/アプリなどのデザインもお任せください。トレンドを取り入れた先進的なデザインを得意としております。</p>
@@ -157,7 +171,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/code-icon@3x.png" alt="コーディング">
+        <img src="img/icon/coding-icon.svg" alt="コーディング">
         <h3 class="service-grid_inner--name">マークアップ</h3>
       </div>
       <p class="service-grid_item--sentence">W3Cに準拠したコーディングを行っております。効率的で堅牢な記述が行えるよう、日々経験を積み重ねております。</p>
@@ -165,7 +179,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/3d-icon@3x.png" alt="動的クリエイティブ制作">
+        <img src="img/icon/3d-icon.svg" alt="動的クリエイティブ制作">
         <h3 class="service-grid_inner--name">動的クリエイティブ制作</h3>
       </div>
       <p class="service-grid_item--sentence">WEBGL,Three.jsを用いた3DCG、動的アニメーションで、webサイトのオリジナリティを高めます。</p>
@@ -173,7 +187,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/ssl-icon@3x.png" alt="独自SSL化対応">
+        <img src="img/icon/ssl-icon.svg" alt="独自SSL化対応">
         <h3 class="service-grid_inner--name">独自SSL化対応</h3>
       </div>
       <p class="service-grid_item--sentence">今となっては必須とも言える、SSL化対応の取得を代行致します。</p>
@@ -181,7 +195,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/wordpressIcon@3x.png" alt="ワードプレス構築">
+        <img src="img/icon/wordpress-icon'.svg" alt="ワードプレス構築">
         <h3 class="service-grid_inner--name">ワードプレス構築</h3>
       </div>
       <p class="service-grid_item--sentence">お客様側でより管理のしやすい環境構築や、アップロード作業まで一貫してサポート致します。</p>
@@ -189,7 +203,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/server-icon@3x.png" alt="サーバー運用・保守">
+        <img src="img/icon/server-icon.svg" alt="サーバー運用・保守">
         <h3 class="service-grid_inner--name">サーバー運用・保守</h3>
       </div>
       <p class="service-grid_item--sentence">PHPやWordpressのバージョンを最新に保ち、サイトの堅牢性を高めます。その他サーバーの管理もお任せください。</p>
@@ -197,7 +211,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/lp-icon@3x.png" alt="ランディングページ制作">
+        <img src="img/icon/lp-icon.svg" alt="ランディングページ制作">
         <h3 class="service-grid_inner--name">ランディングページ制作</h3>
       </div>
       <p class="service-grid_item--sentence">顧客となるターゲット像を導き出すことに始まり、適切な導線設計やデザインを行います。</p>
@@ -205,7 +219,7 @@
     
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/seo-icon@3x.png" alt="SEO内部対策">
+        <img src="img/icon/seo-icon.svg" alt="SEO内部対策">
         <h3 class="service-grid_inner--name">SEO内部対策</h3>
       </div>
       <p class="service-grid_item--sentence">SEOの評価基準は流動的で、頻繁にアップデートが行われています。常に最新の対策が取れるよう実行支援を行います。</p>
@@ -213,7 +227,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/ec-icon@3x.png" alt="ECサイト構築">
+        <img src="img/icon/cart-icon.svg" alt="ECサイト構築">
         <h3 class="service-grid_inner--name">ECサイト構築</h3>
       </div>
       <p class="service-grid_item--sentence">ECcubeやShopifyなどのプラットフォームをベースに開発を行います。小中規模でのECサイトならお任せください。</p>
@@ -221,7 +235,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/speed-icon@3x.png" alt="表示速度改善">
+        <img src="img/icon/speed-icon.svg" alt="表示速度改善">
         <h3 class="service-grid_inner--name">表示速度改善</h3>
       </div>
       <p class="service-grid_item--sentence">表示速度が遅いことに起因するユーザーの離脱でお困りではありませんか？一度当方にご相談くださいませ。</p>
@@ -229,7 +243,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/logo-icon@3x.png" alt="ロゴ作成">
+        <img src="img/icon/logomake-icon.svg" alt="ロゴ作成">
         <h3 class="service-grid_inner--name">ロゴ作成</h3>
       </div>
       <p class="service-grid_item--sentence">個人の方から法人様まで、サービスや事業の魅力を「コンパクト」にカタチに致します。</p>
@@ -237,7 +251,7 @@
 
      <div class="service-grid_item isFadeIn">
       <div class="service-gird_inner">
-        <img src="img/design/hugoIcon@3x.png" alt="Hugoサイト制作">
+        <img src="img/icon/hugo-icon.svg" alt="Hugoサイト制作">
         <h3 class="service-grid_inner--name">Hugoサイト構築</h3>
       </div>
       <p class="service-grid_item--sentence">サーバーの管理や更新が煩雑＆小規模なブログサイトが欲しいという方には、Hugoがおすすめです。</p>
@@ -247,7 +261,10 @@
    </section>
 
    <section id="flow" class="section-wrapper">
-    <h2 class="sectiontitle font-en">Flow<br><span class="sectiontitle-jp font-jp">制作の流れ</span></h2>
+     <div class="sectiontitle-wrapper">
+       <h2 class="sectiontitle-wrapper_h2 font-en">Flow<br><span class="sectiontitle-wrapper_h2--jp font-jp">制作の流れ</span></h2>
+       <p class="sectiontitle-wrapper_p">ーホームページ作成をご依頼頂いた場合の一例です。</p>
+     </div>
      <div class="flow-grid">
        <div class="flow-grid_item isFadeIn">
          <div class="flow-grid_item--inner">
@@ -317,7 +334,10 @@
    </section>
   </main>
   <footer id="contact" class="section-wrapper footer-wrapper">
-   <h2 class="sectiontitle font-en">Contact<br><span class="sectiontitle-jp font-jp">お問い合わせ</span></h2>
+    <div class="sectiontitle-wrapper">
+      <h2 class="sectiontitle-wrapper_h2 font-en">Contact<br><span class="sectiontitle-wrapper_h2--jp font-jp">お問い合わせ</span></h2>
+      <p class="sectiontitle-wrapper_p">ーまずはお気軽にお声がけください。</p>
+    </div>
 
     <div class="footer-textgroup isFadeIn">
      <div class="footer-textgroup_item">
@@ -361,7 +381,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
   <script src="js/iso.js"></script>
-  <script src="js/jq.js"></script>
+  <script src="js/three-index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
