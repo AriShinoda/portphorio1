@@ -1,60 +1,19 @@
-// import from {'three'}
+import * as THREE from 'three';
+// import { OBJLoader } from '';
+// import { MTLLoader } from '../node_modules/three/examples/jsm/loaders/MTLLoader';
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import {TrackballControls} from 'three/examples/jsm/controls/TrackballControls.js';
 
 window.addEventListener('load', init);
+
 function init() {
- window.addEventListener("scroll", function(){
-  const element = document.querySelectorAll('.mask_animation');
-  const scrollCount = document.documentElement.scrollTop || document.body.scrollTop;
-  const windowHeight = window.innerHeight;
-  const threshold = 100;
-  element.forEach((items) => {
-    const elementOffsetTop = items.getBoundingClientRect().top;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const offsetPosition = elementOffsetTop + scrollTop;
-    if(scrollCount > offsetPosition - windowHeight + threshold) {
-      items.querySelector('.mask-inner').classList.add('start');
-    }
-  });
-});
+ 
+ サイズを指定
+ const width = 1320;
+ const height = 700;
 
-
-const menuopen = document.getElementById('open');
-
-menuopen.addEventListener('click' , function() {
-  anime({
-    targets: '.spnav-wrapper_linebox--item',
-    translateX: 80,
-    delay: anime.stagger(100)
-  }),
-  anime({
-    targets: '.spnav-content',
-    translateX: -390,
-    easing: 'easeOutExpo',
-    duration: 1000
-    })
-})
-
-const close = document.querySelectorAll('.spnav-content').forEach(function (close) {
-  close.addEventListener('click', function(){
-    anime({
-    targets: '.spnav-content',
-    translateX: 160,
-    easing: 'easeOutExpo',
-    duration: 1000
-    }),
-    anime({
-    targets: '.spnav-wrapper_linebox--item',
-    translateX: 0,
-    delay: anime.stagger(100) // increase delay by 100ms for each elements. 
-    })
-  })
-})
-
- // サイズを指定
- // const width = 1320;
- // const height = 700;
-
- // レンダラーを作成
+ レンダラーを作成
  const renderer = new THREE.WebGLRenderer({
    canvas: document.querySelector('#myCanvas')
  });
@@ -84,35 +43,57 @@ const close = document.querySelectorAll('.spnav-content').forEach(function (clos
    ));
  }
 
- 
- // マテリアルを作成
- const material = new THREE.PointsMaterial({
-   // 一つ一つのサイズ
-   size: 19,
-   // 色
-   color: 0x007bbb,
-  //  blending: THREE.AdditiveBlending,
- });
-
- const mesh = new THREE.Points(geometry, material);
- scene.add(mesh);
-
-
- // const directionalLight = new THREE.DirectionalLight(0xffffff);
+ // const directionalLight = new THREE.DirectionalLight(0xFFFFFF);
  // directionalLight.position.set(1, 1, 1);
- // // シーンに追加
  // scene.add(directionalLight);
 
+ // const ambientLight = new THREE.AmbientLight(0xFFFFFF);
+ // scene.add(ambientLight);
+
+ // 平行光源を作成
+ const directionalLight = new THREE.DirectionalLight(0xffffff);
+ directionalLight.position.set(1, 1, 1);
+ scene.add(directionalLight);
+ // 環境光を追加
+ const ambientLight = new THREE.AmbientLight(0x333333);
+ scene.add(ambientLight);
+
+ // const OBJLoader = new THREE.OBJLoader();
+
+ // OBJLoader.setpath('./dist/img/three-obj');
+
+ // 3DS形式のモデルデータを読み込む
+ const loader = new THREE.OBJLoader();
+ // 3dsファイルのパスを指定
+ loader.load('./dist/img/three-obj/sitelogo-big.obj', obj => {
+   // 読み込み後に3D空間に追加
+   const model = obj.scene;
+   scene.add(model);
+ });
+
+ // // マテリアルを作成
+ // const material = new THREE.PointsMaterial({
+ //   // 一つ一つのサイズ
+ //   size: 19,
+ //   // 色
+ //   color: 0x007bbb,
+ //  //  blending: THREE.AdditiveBlending,
+ // });
+
+ // const mesh = new THREE.Points(geometry, material);
+ // scene.add(mesh);
 
  renderer.render(scene, camera); // レンダリング
 
- // tick();
+ tick();
 
- // 毎フレーム時に実行されるループイベントです
- // function tick() {
- //   box.rotation.x += 0.8;
- //   renderer.render(scene, camera); // レンダリング
+ 毎フレーム時に実行されるループイベントです
+ function tick() {
+   box.rotation.x += 0.8;
+   renderer.render(scene, camera); // レンダリング
 
- //   requestAnimationFrame(tick);
- // }
+   requestAnimationFrame(tick);
+ }
+
+
 }

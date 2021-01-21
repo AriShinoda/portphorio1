@@ -1,4 +1,5 @@
 const path = require("path");
+const { webpack } = require( "webpack" );
 const MODE = "production";
 const enabledSourceMap = MODE === "development";
 
@@ -61,4 +62,5 @@ module.exports = {
       // openPage: "index.html",
       // lazy: true
   },
+ 
 };
