@@ -4,7 +4,6 @@
    import "./iso.js";
    import "./three-index.js";
 
-
    window.addEventListener('load', init);
 
    function init() {

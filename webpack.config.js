@@ -49,9 +49,9 @@ module.exports = {
   //出力先のファイル
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'app.js',
+    filename: 'main.js',
   },
-  devtool: 'source-map',
+  // devtool: 'source-map',
   
      //webpack-dev-server用設定
     devServer: {

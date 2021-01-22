@@ -46,14 +46,10 @@ main {
   }
  }
  .scrollarrow-wrapper {
-  // position: absolute;
-  // right: 0;
-  // bottom: 0;
   margin: 0 auto;
   width: 100%;
   @include columnFlex;
   justify-content: center;
-  // text-align: right;
   margin: 0 auto;
 
   &_inner {
@@ -68,9 +64,6 @@ main {
       width: 1.2%;
       
       line-height: .3rem;
-      // border-left: .12rem dotted #494949;
-      // padding-bottom: 2rem;
-      // overflow: hidden;
     }
 
      .scrollarrow {
@@ -116,7 +109,6 @@ main {
   padding: 1rem 0;
 
   &_item {
-   
 
     &--inner {
       width: 90%;
@@ -129,7 +121,6 @@ main {
         margin: .8rem 0;
         text-align: center;
         width: 100%;
-        // @include bf;
         @include fz-subtitle(700);
         padding: 1rem auto;
         line-height: 3rem;
@@ -166,116 +157,6 @@ flex-flow: row-reverse;
   padding: 6rem 8rem;
   background-color: tomato;
 }
-
-//  .newposts-box{
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-//   gap: 15px;
-//   width: 50%;
-//   justify-content: center;
-//   // margin-left: 50%;
-  
-  
-//   &_item{ 
-//    @include columnFlex;
-//    justify-content: flex-end;
-//    background-size: cover;
-//    height: 190px;
-//    background-image: url(../../img/icon/samune-dami.png);
-//    text-decoration: none;
-//    @include font-black;
-//    @include objradius;
-//    @include transitiontemp;
-
-//    &--gazo {
-//     max-width: 100%;
-//     height: auto;
-//    }
-   
-//    .newposts-textbox {
-//    @include white-bg;
-//    @include obj-blue;
-//    @include font-black;
-//    position: relative;
-//    overflow: hidden;
-//    opacity: .8;
-//    @include objradius;
- 
-//     &_title,&_caption {
-//      text-align: left;
-//      z-index: 1;
-//     }
-//     &_title {
-//      margin: .5rem .3rem;
-//     }
-//     &_caption {
-//      line-height: 1rem;
-//      margin: .3rem .3rem;
-//     }
-//    }
- 
-//    .newposts-textbox:before {
-//     filter:blur(2px);
-//     position: absolute;
-//     background: inherit;
-//    }
-//   }
-
-//   &_item:hover {
-//     @include boxshadowtemp;
-//   }
-//  }
-
-//  .allview-btn {
-//   width: 70%;
-//   margin: auto;
-//   text-align: center;
-//   font-weight: 700;
-//   letter-spacing: .16rem;
-//   position: relative;
-//   display: inline-block;
-//   transition: all 0.3s;
-//   text-decoration:none;
-//   cursor: pointer;
-//   pointer-events: auto;
-  
-//   &_inner {
-//     font-size: 1.6rem;
-//     @include font-black;
-//   }
-// }
-
-// a.btn-svg {
-//   font-weight: 700;
-//   line-height: 54px;
-//   width: 240px;
-//   height: 54px;
-//   cursor: pointer;
-//   text-decoration: none;
-//   background-color: transparent;
-// }
-
-// a.btn-svg svg {
-//   position: absolute;
-//   top: 0;
-//   left: 8%;
-//   width: 100%;
-//   height: 100%;
-// }
-
-// a.btn-svg svg rect {
-//   -webkit-transition: all 400ms ease;
-//   transition: all 400ms ease;
-//   stroke: #000;
-//   stroke-width: 2;
-//   stroke-dasharray: 200px, 16px;
-//   stroke-dashoffset: 70px;
-// }
-
-// a.btn-svg:hover svg rect {
-//   stroke-dashoffset: 244px;
-//   stroke: #007bbb;
-// }
 }
 
 .section-wrapper {
@@ -304,17 +185,11 @@ flex-flow: row-reverse;
    &_p {
     margin: 1rem 0 0 0;
    }
-  //  &_p::before {
-  //   width: 20px;
-  //   height: 2px;
-  //   background:rgb(255, 255, 255);
-  //  }
  }
 
 }
  
 .service-grid {
-//  @include inner-width;
  margin: 0 auto;
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
@@ -322,7 +197,6 @@ flex-flow: row-reverse;
 
  &_item {
   @include columnFlex;
-  // @include objradius;
   @include transitiontemp;
   width: 100%;
   height: auto;

@@ -233,13 +233,11 @@
             margin: 1.5rem 0 3rem 1rem;
          }
       }
-
       .scrollarrow {
          padding-left: 0;
       }
    }
     
-
    .footer-wrapper {
 
       .footerlink-group {
@@ -260,56 +258,41 @@
       grid-template-columns: repeat(1, 600px);
    }
 
-   .strongpoints-box {
-      &_item {
-         @include columnFlex;
-         justify-content: center;
+   // .strongpoints-box {
+   //    &_item {
+   //       @include columnFlex;
+   //       justify-content: center;
 
-         &--inner {
-            width: 100%;
-            .inner-title {
-               line-height: 2.5rem;
-            }
-         }
+   //       &--inner {
+   //          width: 100%;
+   //          .inner-title {
+   //             line-height: 2.5rem;
+   //          }
+   //       }
 
-         &--img {
-            display: none;
-         }
-      }
-      &_item:nth-of-type(1) {
-         background-image:url(../../img/icon/strongicon-1.svg);
-         background-repeat: no-repeat;
-         background-position: 50% 50%;
-      }
-      &_item:nth-of-type(2) {
-         background-image:url(../../img/icon/strongicon-2.svg);
-         background-repeat: no-repeat;
-         background-position: 50% 50%;
-      }
-      &_item:nth-of-type(3) {
-         background-image:url(../../img/icon/strongicon-3.svg);
-         background-repeat: no-repeat;
-         background-position: 50% 50%;
-      }
-   }
+   //       &--img {
+   //          display: none;
+   //       }
+   //    }
+   // }
 
-   .flow-grid {
-      grid-template-columns: repeat(auto-fit , minmax(280px, auto));
-      &_item {
-         height: auto;
-      }
-   }
-   .newposts-wrapper {
-      flex-direction: column;
-      .newposts-box {
-         width: 100%;
-         grid-template-columns: repeat(auto-fit, minmax(160px, auto));
-         gap: 8px;
-         padding-bottom: 2rem;
+   // .flow-grid {
+   //    grid-template-columns: repeat(auto-fit , minmax(280px, auto));
+   //    &_item {
+   //       height: auto;
+   //    }
+   // }
+   // .newposts-wrapper {
+   //    flex-direction: column;
+   //    .newposts-box {
+   //       width: 100%;
+   //       grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+   //       gap: 8px;
+   //       padding-bottom: 2rem;
 
-         &_item {
-            height: 140px;
-         }
-      }
-   }
+   //       &_item {
+   //          height: 140px;
+   //       }
+   //    }
+   // }
 }
