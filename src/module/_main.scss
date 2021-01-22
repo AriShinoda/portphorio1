@@ -38,7 +38,6 @@ main {
   }
  
   &_sentence {
-   @include bf;
    padding: 1rem;
    width: 35%;
    text-align: left;
@@ -251,7 +250,7 @@ flex-flow: row-reverse;
       @include objradius;
       padding-left: 1rem;
       justify-content: flex-start;
-
+      
       .inner-title {
         @include font-white;
         padding-left: 1rem;
