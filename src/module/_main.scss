@@ -99,6 +99,146 @@ main {
  }
 }
 
+.mission {
+  width: 100%;
+  
+  &-box {
+    width: 100%;
+    margin: 0 auto;
+  
+    &_item {
+      @include columnFlex;
+      justify-content: center;
+      text-align: left;
+      width: 90%;
+      margin: 0 auto;
+  
+      &--ttl {
+        margin: 1rem 0 3rem 0;
+        width: 90%;
+        font-size: 1.75rem;
+        line-height: 2rem;
+      }
+  
+      &--text {
+        font-weight: 400;
+        font-size: 1rem;
+        width: 65%;
+        line-height: 1.7rem;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}
+
+.plans {
+  @include columnFlex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(auto-fit , 360px);
+    justify-content: center;
+    @include inner-width;
+    margin: 0 auto;
+    gap: 20px;
+    
+    &_item {
+      width: 100%;
+      height: 100%;
+      @include objradius;
+      @include bf;
+      background: linear-gradient(-135deg, rgb(228, 169, 114, 1), rgb(153, 65, 216, 1));
+      position: relative;
+      @include columnFlex;
+      justify-content: flex-start;
+      margin: 1rem auto;
+      text-align: left;
+      box-sizing: inherit;
+      transition: ease-in-out all .3s;
+
+      &--title {
+        border-bottom: .26rem solid #f2f2f2;
+        line-height: 2.7rem;
+        margin: .5rem 0 0 0;
+        @include fz-subtitle(700);
+        font-size: 1.3rem;
+        padding-left: .7rem;
+
+        &__en {
+          font-size: 1.6rem;
+        }
+      }
+      
+      &--copy {
+        @include fz-paragraph(500);
+        padding-left: .7rem;
+        margin: 1rem 0;
+      }
+      &--price {
+        @include fz-subtitle(700);
+        padding-left: .7rem;
+        margin: 1rem 0 2rem 0;
+        font-size: 1.2rem;
+        
+        &__num {
+          padding-left: .7rem;
+          font-size: 2.9rem;
+          margin: 1rem 0 0 0;
+        }
+      }
+
+      &--logo , &--logoBox {
+        position: absolute;
+        right: 3%;
+        bottom: 2%;
+        text-align: right;
+        margin: 0;
+      }
+      &--logoBox {
+        @include rowFlex;
+        justify-content: center;
+
+        &__inner {
+          margin: auto;
+        }
+
+        &__plus {
+          font-size: 2rem;
+          line-height: 2rem;
+          // @include font-black;
+          font-weight: 700;
+          margin: auto;
+          padding: 0 .5rem;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+
+    &_item:hover {
+      box-shadow: -2px 2px 10px rgba(242, 242, 242, 0.247);
+    }
+    
+    &_item:nth-of-type(2),&_item:nth-of-type(3) {
+      background: linear-gradient(-135deg, rgba(114, 201, 228, 1), rgb(0, 123, 187));
+    }
+    &_item:nth-of-type(4) {
+      background: linear-gradient(-135deg, rgb(114, 228, 179, 1), rgb(78, 216, 65, 1));
+    }
+    &_item:nth-of-type(5) {
+      background: linear-gradient(-135deg, rgb(228, 196, 114, 1), rgb(216, 125, 65, 1));
+    }
+
+    &_btn {
+      margin: auto;
+      @include btn-svg-plans;
+    }
+  }
+}
+
 .strongpoints-box {
   display: grid;
   gap: 10px;
@@ -166,7 +306,7 @@ flex-flow: row-reverse;
 
  .sectiontitle-wrapper {
    @include inner-width;
-   margin: 1,5rem 20% 1.5rem 0;
+   margin: 1.5rem 20% 1.5rem 0;
    text-align: left;
    padding: 1rem 0 1.5rem 2rem;
 
@@ -247,6 +387,7 @@ flex-flow: row-reverse;
     &--inner {
       @include rowFlex;
       @include obj-blue;
+      @include blue-grad;
       @include objradius;
       padding-left: 1rem;
       justify-content: flex-start;
@@ -262,6 +403,14 @@ flex-flow: row-reverse;
       text-align: left;
       width: 80%;
       padding: 1rem;
+
+      &__cloudsign {
+        @include font-white;
+        transition: all ease-in-out .2s;
+      }
+      &__cloudsign:hover {
+        color: tomato;
+      }
     }
   }
 

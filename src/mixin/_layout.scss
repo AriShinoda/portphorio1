@@ -33,3 +33,8 @@ width: 92%;
  backdrop-filter: blur(1.6px);
  background: rgba(0, 214, 229, 0.486);
 }
+
+@mixin planbgSet {
+ background-repeat: no-repeat;
+ background-position: center;
+}

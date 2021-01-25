@@ -16,15 +16,15 @@
       <canvas id="myCanvas"></canvas>
     </div>
   <div class="pcnav-bar">
-    <a href="#top" class="pcnav-bar_logobox">
+    <a href="./index.html" class="pcnav-bar_logobox">
       <img class="pcnav-bar_logobox--img" src="/img/icon/sitelogo.svg" alt="logo">
       <span class="pcnav-bar_logobox--text font-en">Azure Design</span>
     </a>
     <ul class="navmenu font-en">
-    <li class="navmenu-item"><a class="navmenu-item__link" href="#newposts">Blog</a></li>
+    <li class="navmenu-item"><a class="navmenu-item__link" href="./index.html">Blog</a></li>
     <li class="navmenu-item"><a class="navmenu-item__link" href="#service">Service</a></li>
     <li class="navmenu-item"><a class="navmenu-item__link" href="#flow">Flow</a></li>
-    <li class="navmenu-item"><a class="navmenu-item__link" href="#contact">Contact</a></li>
+    <li class="navmenu-item"><a class="navmenu-item__link" href="./contact.html">Contact</a></li>
     </ul>
   </div> 
 
@@ -55,21 +55,21 @@
     </ul>
   </header>
     <main>
-      <section class="contact-wrapper section-wrapper">
-        <h2 class="sectiontitle font-en">Contact<br><span class="sectiontitle-jp font-jp">お問い合わせ</span></h2>
+      <section class="contact-wrapper section-wrapper under-wrapper">
+        <div class="sectiontitle-wrapper">
+          <h2 class="sectiontitle-wrapper_h2 font-en">Contact<br><span class="sectiontitle-wrapper_h2--jp font-jp">お問い合わせ</span></h2>
+          <p class="sectiontitle-wrapper_p">お気軽にお問い合わせください。お返事は当日中にご返信いたします。</p>
+        </div>
         <!-- class, action, methodを変更しないでください -->
         <form class="formrun formbox" action="https://form.run/api/v1/r/801g301jwia5c2ajuw7ed9l0" method="post">
           <!-- ↓自由に要素を追加・編集することができます -->
-          <!-- <div class="preference">
-            <label for="cheese">Do you like cheese?</label>
-            <input type="checkbox" name="cheese" id="cheese">
-        </div> -->
 
           <div class="formbox-item">
           
             <p class="formbox-item_label"><span class="formbox-item_label--mast">必須</span>お名前</p>
             <div class="formbox-item_inner">
-              <input data-formrun-required class="formbox-item_inner--input" name="お名前" type="text" placeholder="例）お名前or会社名">
+              <input data-formrun-required class="formbox-item_inner--input" id="l_text3" name="お名前" type="text" placeholder="例）お名前or会社名">
+              <div class="formbox-item_inner--underline"></div>
               <div class="formbox-item_inner--error" data-formrun-show-if-error="お名前">お名前を正しく入力してください</div>
             </div>
           </div>
@@ -104,7 +104,7 @@
           <div class="formbox-item">
             <p class="formbox-item_label"><span class="formbox-item_label--mast">必須</span>お問い合わせ内容</p>
             <div class="formbox-item_inner">
-              <textarea name="お問い合わせ" class="formbox-item_inner--textarea" data-formrun-required placeholder="ざっくりでも結構です。"></textarea>
+              <textarea name="お問い合わせ" class="formbox-item_inner--textarea" data-formrun-required placeholder="お問い合わせを簡単にご入力ください。"></textarea>
               <div class="formbox-item_inner--error" data-formrun-show-if-error="お問い合わせ">お問い合わせ内容を入力してください</div>
             </div>
           </div>

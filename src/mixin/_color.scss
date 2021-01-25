@@ -4,7 +4,7 @@
 }
 
 @mixin black-bg {
- background-color: #000000;
+ background-color: #101010;
 }
 
 @mixin black-bg_trans {
@@ -13,14 +13,14 @@
 }
 
 @mixin obj-blue {
- background-color: #007bbb;
+ background-color: rgb(0, 123, 187);
 }
-@mixin obj-blueTrans {
- background-color: rgba(0, 214, 229, 0.486);
+@mixin blue-grad {
+ background: linear-gradient(-135deg, rgba(114, 201, 228, 1), rgb(0, 123, 187));
 }
 
 @mixin font-black {
- color: #222222;
+ color: #101010;
 }
 
 @mixin font-white {

@@ -1,3 +1,10 @@
+.section-wrapper {
+ @include inner-width;
+ @include bf;
+margin: 0 auto;
+padding: 1rem 0 2.5rem 0;
+}
+
 .contact-wrapper {
  margin: 3rem auto 0 auto;
  @include inner-width;
@@ -31,41 +38,35 @@
    &_inner {
     @include columnFlex;
     justify-content: start;
+    outline: none;
 
     &--input {
      height: 30px;
-     border: .17rem solid #007bbb;
+     border: none;
+     border-bottom: .15rem solid #007bbb;
      @include objradius;
+     @include white-bg;
+     box-sizing: border-box;
+     outline: none;
+     transition: ease-in-out all .3s;
     }
+
+    
+    
     
     &--textarea {
      border: .17rem solid #007bbb;
      height: 120px;
      @include objradius;
+     outline: none;
     }
 
     &--error {
-     color: rgb(221, 71, 71);
+     color: tomato;
     }
    }
 
-   %_radio {
-    @include columnFlex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    &--inner {
-     @include rowFlex;
-    
-
-     .radio-btn {
-      
-     }
-     .radio-txt {
-      @include fz-paragraph(500);
-     }
-    }
-   }
+   
   }
 
   &-btnwrapper {
@@ -74,16 +75,56 @@
    text-align: center;
 
    &_inner {
+    width: 50%;
     cursor: pointer;
-    @include black-bg;
+    background: tomato;
     @include font-white;
-    padding: 1rem;
+    @include fz-subtitle(500);
+    letter-spacing: .4rem;
+
+    padding: 1rem 1.5rem;
     font-family: 'Noto Sans JP',sans-serif;
-    border: none;
     @include objradius;
     margin: 1rem auto;
+    border: .17rem solid rgba(255, 99, 71, 0);
+    transition: ease-in-out all .3s;
+   }
+
+   &_inner:hover {
+    @include obj-blue;
    }
   }
 
+ }
+
+ //ths.html
+ .ths-wrapper {
+  margin: 10rem auto 0 auto;
+  width: 40%;
+  height: 30%;
+  background-color: tomato;
+  @include columnFlex;
+  justify-content: center;
+  text-align: center;
+
+  &_complete {
+   margin: 1.5rem auto;
+   @include fz-sectiontitle(500);
+   border-bottom: .5rem solid #007bbb;
+   box-sizing: border-box;
+   padding-bottom: 1rem;
+   width: 80%;
+
+  }
+
+  &_checkicon {
+   
+  }
+
+  &_text {
+   width: 80%;
+   text-align: center;
+   margin: 1rem auto;
+  }
  }
 }

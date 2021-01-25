@@ -3,6 +3,7 @@
 @import "./mixin/_font.scss";
 @import "./mixin/_layout.scss";
 @import "./mixin/_mq.scss";
+@import "./mixin/_animation.scss";
 
 //module
 @import "./module/_footer.scss";
@@ -11,3 +12,5 @@
 @import "./module/_overall.scss";
 @import "./module/_post.scss";
 @import "./module/_sp.scss";
+@import "./module/_credit.scss";
+@import "./module/overall-under.scss";

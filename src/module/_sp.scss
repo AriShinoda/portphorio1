@@ -212,6 +212,25 @@
          }
       }
    }
+
+   //contact.html
+   .contact-wrapper {
+
+      .formbox {
+
+         &-item {
+            width: 90%;
+         }
+
+         &-btnwrapper {
+            width: 90%;
+
+            &_inner {
+               width: 100%;
+            }
+         }
+      }
+   }
 }
 
  //ihone6,7,se
