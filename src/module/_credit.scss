@@ -1,0 +1,36 @@
+.credit {
+ @include inner-width;
+ margin: 5rem auto 0 auto;
+
+ &-box {
+  @include columnFlex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  
+   .credit-ttl {
+    
+    font-size: 1.6rem;
+    text-align: left;
+   }
+
+  &_item {
+   @include columnFlex;
+   justify-content: flex-start;
+   text-align: left;
+   margin: 1rem 0;
+
+   &--ttl {
+    @include fz-subtitle(500);
+    margin: 1rem 0;
+    font-size: 1.3rem;
+   }
+
+   &--text {
+    margin: 0;
+    word-break: break-all;
+   }
+  }
+ }
+}

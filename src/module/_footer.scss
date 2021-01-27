@@ -28,6 +28,16 @@
  .contact-copylight {
   text-align:center;
   margin: 0 auto;
+
+  &_credit {
+    margin-left: 2rem;
+    @include font-white;
+    transition: all ease-in-out .2s;
+  }
+  &_credit:hover {
+    color: tomato;
+  }
+
    }
    .footerlink-group {
     width: 65%;

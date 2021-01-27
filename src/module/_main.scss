@@ -139,7 +139,6 @@ main {
   &-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(auto-fit , 360px);
     justify-content: center;
     @include inner-width;
     margin: 0 auto;
@@ -323,6 +322,14 @@ flex-flow: row-reverse;
 
    &_p {
     margin: 1rem 0 0 0;
+
+    .linkWord {
+      @include font-white;
+      transition: all ease-in-out .2s;
+    }
+    .linkWord:hover {
+      color: tomato;
+    }
    }
  }
 

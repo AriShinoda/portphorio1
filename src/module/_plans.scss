@@ -1,0 +1,140 @@
+.plan {
+  @include inner-width;
+  margin-top: 5rem;
+
+  &-grid {
+    display: grid;
+    grid-template-rows: 50px, 150px, 150px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 5px;
+    margin: 2rem auto;
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(-135deg, rgb(228, 169, 114, 1), rgb(153, 65, 216, 1));
+    @include objradius;
+    
+    &_item {
+      margin: 0 1rem;
+
+      &--ttl {
+        @include fz-paragraph(700);
+        font-size: 1.1rem;
+        text-align: left;
+        margin: .5rem 0;
+      }
+
+      &--list {
+        list-style-type: circle;
+        padding-left: 0;
+        
+        &__inner {
+          text-align: left;
+        }
+      }
+
+      img  {
+        margin: auto 0;
+      }
+    }
+
+    &_top {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+      @include rowFlex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .font-en {
+        font-size: 2.3rem;
+        margin: 1rem 0 .5rem 0;
+        width: 75%;
+      }
+      .font-jp{ 
+        @include fz-paragraph(500);
+        font-size: 1.1rem;
+        padding-left: .5rem;
+      } 
+
+      .plan-gird_top--ttl__caption {
+        @include fz-paragraph(500);
+        font-size: 1rem;
+        width: 75%;
+      }
+
+      &--img{ 
+        @include rowFlex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: auto 0;
+        img  {
+          margin: auto;
+        }
+      }
+      
+    }
+
+    &_upperright {
+      grid-row: 2 / 4;
+      grid-column: 1;
+      @include columnFlex;
+      justify-content: start;
+      border-right: .15rem solid #f2f2f2;
+      box-sizing: border-box;
+
+      &--head {
+        @include rowFlex;
+        justify-content: left;
+        margin: 0;
+        
+
+        &__item {
+          @include fz-paragraph(700);
+          font-size: 1rem;
+          margin: 0rem 1rem;
+          text-align: center;
+          line-height: 2.3rem;
+
+          .font-en {
+            font-size: 2.5rem;
+            font-weight: 700;
+            padding-right: .3rem;
+          }
+        }
+      }
+
+      &--text {
+        width: 90%;
+        text-align: left;
+        margin: auto;
+      }
+    }
+
+    &_upperleft {
+      grid-row: 2 / 4;
+      grid-column: 2 / 3;
+    }
+
+    &_lowerright {
+      grid-row: 3 / 4;
+      grid-column: 3 / 4;
+    }
+
+    &_lowerleft{
+      grid-row: 2 / 3;
+      grid-column: 3 / 4;
+    }
+  }
+
+  &-grid:nth-of-type(3),&-grid:nth-of-type(4) {
+    background: linear-gradient(-135deg, rgba(114, 201, 228, 1), rgb(0, 123, 187));
+  }
+
+  &-grid:nth-of-type(5) {
+    background: linear-gradient(-135deg, rgb(114, 228, 179, 1), rgb(78, 216, 65, 1));
+  }
+  &-grid:nth-of-type(6) {
+    background: linear-gradient(-135deg, rgb(228, 196, 114, 1), rgb(216, 125, 65, 1));
+  }
+
+}
