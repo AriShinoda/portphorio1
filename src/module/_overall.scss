@@ -132,3 +132,10 @@ $easing: ease;
   background: tomato;
   @include font-white;
 }
+
+.link-hover {
+  @include linkbefore;
+}
+.link-hover:hover {
+  @include after;
+}

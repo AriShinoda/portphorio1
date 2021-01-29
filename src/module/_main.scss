@@ -100,7 +100,8 @@ main {
 }
 
 .mission {
-  width: 100%;
+  // width: 100%;
+  @include inner-width;
   
   &-box {
     width: 100%;
@@ -118,6 +119,10 @@ main {
         width: 90%;
         font-size: 1.75rem;
         line-height: 2rem;
+
+         br {
+           display: none;
+         }
       }
   
       &--text {
@@ -136,6 +141,7 @@ main {
   justify-content: center;
   width: 100%;
   margin: 0 auto;
+
   &-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -232,8 +238,8 @@ main {
     }
 
     &_btn {
-      margin: auto;
       @include btn-svg-plans;
+      margin: auto;
     }
   }
 }
@@ -411,13 +417,6 @@ flex-flow: row-reverse;
       width: 80%;
       padding: 1rem;
 
-      &__cloudsign {
-        @include font-white;
-        transition: all ease-in-out .2s;
-      }
-      &__cloudsign:hover {
-        color: tomato;
-      }
     }
   }
 

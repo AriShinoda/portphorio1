@@ -101,10 +101,11 @@ padding: 1rem 0 2.5rem 0;
  .ths-wrapper {
   margin: 10rem auto 0 auto;
   width: 40%;
-  height: 30%;
+  height: 60%;
   background-color: tomato;
   @include columnFlex;
   justify-content: center;
+  @include objradius;
   text-align: center;
 
   &_complete {

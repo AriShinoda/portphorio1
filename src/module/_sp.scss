@@ -3,16 +3,18 @@
 .spnav-wrapper {
  display: none;
 }
-//menu
 @include tab {
+
+   
+
  .pcnav-bar {
   display: none;
  }
 
  .section-wrapper {
-    .sectiontitle-wrapper {
-       padding: 1rem 0 1.5rem 0;
-    }
+   .sectiontitle-wrapper {
+      padding: 1rem 0 1.5rem 0;
+   }
  }
 
  .header-wrapper {
@@ -90,24 +92,48 @@
      
    }
  }
- 
-   .strongpoints-box {
-      @include columnFlex;
-      justify-content: center;
-      @include inner-width;
-      &_item {
-      margin: 2rem auto;
 
-         &--inner {
-            margin: 0 auto;
-            width: 100%;
+   .mission {
+      &-box {
+         &_item {
+          margin-left: 1rem;
+          margin-right: 1rem;
+
+         &--ttl {
             text-align: center;
-         }
-         .inner-title {
+            width: 100%;
+            margin: 1rem auto 3rem auto;
+            font-size: 1.2rem;
+
+            br {
+               display: inherit;
+               }
+            }
+      
+            &--text {
             margin: 0 auto;
+            font-weight: 400;
+            font-size: .95rem;
+            width: 100%;
+            line-height: 1.7rem;
+            padding-left: 0;
+            }
          }
       }
    }
+
+   .plans {
+
+      &-box {
+         grid-template-columns: repeat(1 , 1fr);
+
+         &_btn {
+            margin: 2rem auto;
+            padding-left: 2rem;
+         }
+      }
+   }
+ 
 
    .flow-grid {
       grid-template-columns: repeat(auto-fit , minmax(280px, auto));

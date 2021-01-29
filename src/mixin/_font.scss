@@ -25,3 +25,11 @@
  @mixin fm-jp {
   font-family: 'Noto Sans JP',sans-serif;
  }
+
+ @mixin linkbefore {
+   transition: all ease-in-out .2s;
+   @include font-black;
+  }
+  @mixin after {
+   @include font-white;
+  }
